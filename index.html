@@ -718,6 +718,12 @@ section{margin-bottom:44px;scroll-margin-top:64px}
 label.chk{margin-left:auto;font-size:13px;color:var(--mute);display:flex;align-items:center;gap:6px;min-height:40px}
 label.chk input{width:20px;height:20px}
 footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--mute);font-size:12px}
+.links{display:grid;gap:8px;margin-bottom:28px}
+.links h2{font:italic 600 22px/1.2 Georgia,serif;margin:0 0 4px}
+.links a.lk{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;min-height:56px}
+.links a.lk i{font-style:normal;font-size:22px}
+.links a.lk b{display:block}.links a.lk span{display:block;font-size:13px;color:var(--mute)}
+.links a.lk::after{content:"↗";margin-left:auto;color:var(--accent);font-weight:700}
 #mapwrap{margin-bottom:32px;scroll-margin-top:64px}
 #mapwrap h2{font:italic 600 24px/1.2 Georgia,serif;margin:0 0 10px}
 #filters{display:flex;gap:8px;overflow-x:auto;margin-bottom:10px}
@@ -740,6 +746,7 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--mute);font-
 <nav><div id="nav"></div></nav>
 <main>
   <details class="notes" id="notes"><summary>Good to know</summary><ul id="noteList"></ul></details>
+  <div class="links" id="links"></div>
   <div id="mapwrap"><h2>Map of all stops</h2><div id="filters"></div><div id="map"></div><p id="mapnote"></p></div>
   <div id="days"></div>
 </main>
@@ -1190,6 +1197,44 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--mute);font-
     }
    ]
   }
+ ],
+ "links": [
+  {
+   "icon": "🗺️",
+   "title": "Map 1",
+   "sub": "Google My Maps",
+   "url": "https://www.google.com/maps/d/edit?hl=en&mid=1TEj-5e5l0rs17-LvF580b4S5SsVa638&ll=46.82218540084284%2C7.996456347656249&z=10"
+  },
+  {
+   "icon": "🗺️",
+   "title": "Map 2",
+   "sub": "Google My Maps",
+   "url": "https://www.google.com/maps/d/edit?hl=iw&mid=1JpXZ3P7-gsAQPdcOjAARhRZFjsDZ3EA&ll=47.17625737978807%2C8.360949999999997&z=9"
+  },
+  {
+   "icon": "🎟️",
+   "title": "Trip day 1",
+   "sub": "GetYourGuide: private tour to waterfalls, valley & Interlaken",
+   "url": "https://www.getyourguide.com/zurich-l55/zurich-private-day-tour-to-waterfalls-valley-interlaken-t923032/?ranking_uuid=a116dbd6-43f7-4d11-82c4-a2609ca3f91b&q=Viewing+points%2C+Stechelberg"
+  },
+  {
+   "icon": "🎟️",
+   "title": "Trip day 2",
+   "sub": "GetYourGuide: luxury Jungfrau region day trip with Aare Gorge",
+   "url": "https://www.getyourguide.com/zurich-l55/from-zurich-luxury-jungfrau-region-day-trip-with-aare-gorge-t1424091/?ranking_uuid=a116dbd6-43f7-4d11-82c4-a2609ca3f91b&q=Viewing+points%2C+Stechelberg"
+  },
+  {
+   "icon": "✈️",
+   "title": "El Al",
+   "sub": "Zurich surroundings by car",
+   "url": "https://www.elal.com/magazine/portfolio-items/europe/switzerland/zurich/zurich-surroundings-by-car/"
+  },
+  {
+   "icon": "📋",
+   "title": "Plan",
+   "sub": "Google Sheets",
+   "url": "https://docs.google.com/spreadsheets/d/1M1zNZD9aKFpXPUum2J7g6_dMi4OYXEWtU3vrlqov8Hk/edit?gid=1169576147#gid=1169576147"
+  }
  ]
 }</script>
 <script>
@@ -1218,6 +1263,7 @@ $('title').textContent=plan.title;$('subtitle').textContent=plan.subtitle;
 $('stats').innerHTML='<div class="stat"><b>CHF '+G.cost+'</b><span>Est. total (2)</span></div><div class="stat"><b>'+G.km+' km</b><span>Driving</span></div><div class="stat"><b>'+dur(G.min)+'</b><span>Drive time</span></div>';
 $('noteList').innerHTML=plan.notes.map(function(n){return '<li>'+esc(n)+'</li>'}).join('');
 
+$('links').innerHTML='<h2>Links</h2>'+plan.links.map(function(l){return '<a class="lk" target="_blank" rel="noopener" href="'+esc(l.url)+'"><i>'+l.icon+'</i><div><b>'+esc(l.title)+'</b><span>'+esc(l.sub)+'</span></div></a>'}).join('');
 var nav='',html='';
 plan.days.forEach(function(day,i){
  var p=dparts(day.date),id='day'+(i+1);

@@ -718,8 +718,8 @@ section{margin-bottom:44px;scroll-margin-top:64px}
 label.chk{margin-left:auto;font-size:13px;color:var(--mute);display:flex;align-items:center;gap:6px;min-height:40px}
 label.chk input{width:20px;height:20px}
 footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--mute);font-size:12px}
-.links{display:grid;gap:8px;margin-bottom:28px}
-.links h2{font:italic 600 22px/1.2 Georgia,serif;margin:0 0 4px}
+.links .lkgrid{display:grid;gap:8px;margin-top:12px}
+details.links{margin-bottom:16px}
 .links a.lk{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;min-height:56px}
 .links a.lk i{font-style:normal;font-size:22px}
 .links a.lk b{display:block}.links a.lk span{display:block;font-size:13px;color:var(--mute)}
@@ -746,7 +746,7 @@ footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--mute);font-
 <nav><div id="nav"></div></nav>
 <main>
   <details class="notes" id="notes"><summary>Good to know</summary><ul id="noteList"></ul></details>
-  <div class="links" id="links"></div>
+  <details class="notes links" id="links"></details>
   <div id="mapwrap"><h2>Map of all stops</h2><div id="filters"></div><div id="map"></div><p id="mapnote"></p></div>
   <div id="days"></div>
 </main>
@@ -1263,7 +1263,7 @@ $('title').textContent=plan.title;$('subtitle').textContent=plan.subtitle;
 $('stats').innerHTML='<div class="stat"><b>CHF '+G.cost+'</b><span>Est. total (2)</span></div><div class="stat"><b>'+G.km+' km</b><span>Driving</span></div><div class="stat"><b>'+dur(G.min)+'</b><span>Drive time</span></div>';
 $('noteList').innerHTML=plan.notes.map(function(n){return '<li>'+esc(n)+'</li>'}).join('');
 
-$('links').innerHTML='<h2>Links</h2>'+plan.links.map(function(l){return '<a class="lk" target="_blank" rel="noopener" href="'+esc(l.url)+'"><i>'+l.icon+'</i><div><b>'+esc(l.title)+'</b><span>'+esc(l.sub)+'</span></div></a>'}).join('');
+$('links').innerHTML='<summary>🔗 Links ('+plan.links.length+')</summary><div class="lkgrid">'+plan.links.map(function(l){return '<a class="lk" target="_blank" rel="noopener" href="'+esc(l.url)+'"><i>'+l.icon+'</i><div><b>'+esc(l.title)+'</b><span>'+esc(l.sub)+'</span></div></a>'}).join('')+'</div>';
 var nav='',html='';
 plan.days.forEach(function(day,i){
  var p=dparts(day.date),id='day'+(i+1);

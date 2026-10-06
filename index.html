@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1f4e5f">
+<title>Swiss Trip 16–19 Oct 2026</title>
+<style>
+:root{--bg:#f7f5f0;--card:#fff;--ink:#1d2428;--mute:#5d6a70;--line:#e3ded3;--accent:#1f4e5f;--accent-ink:#fff;
+--sight:#e4eef4;--sight-i:#1d5a7a;--food:#fbeadb;--food-i:#9a4a10;--transport:#e8e6f4;--transport-i:#4b3f8f;
+--lodging:#e5f1e6;--lodging-i:#2d6a37;--activity:#fdeacb;--activity-i:#8a5a00;--flight:#e8e6f4;--flight-i:#4b3f8f}
+@media (prefers-color-scheme:dark){:root{--bg:#14191c;--card:#1d2428;--ink:#eceae4;--mute:#9aa7ad;--line:#2f3a40;--accent:#7fc1d6;--accent-ink:#10242c;
+--sight:#1f3541;--sight-i:#9fd0e6;--food:#3d2c1d;--food-i:#f0b783;--transport:#2b2a45;--transport-i:#bdb4f2;
+--lodging:#1f3523;--lodging-i:#9fd6a7;--activity:#3d3115;--activity-i:#f0cf84;--flight:#2b2a45;--flight-i:#bdb4f2}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--accent)}
+header{padding:20px 16px 12px;max-width:760px;margin:0 auto}
+h1{font:italic 600 28px/1.15 Georgia,serif;margin:0 0 6px}
+.sub{color:var(--mute);font-size:14px;margin:0 0 14px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 6px;text-align:center}
+.stat b{display:block;font-size:17px}.stat span{font-size:11px;color:var(--mute);text-transform:uppercase;letter-spacing:.04em}
+nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding:8px 16px}
+nav div{max-width:760px;margin:0 auto;display:flex;gap:8px;overflow-x:auto}
+nav a{flex:0 0 auto;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:14px;font-weight:600}
+nav a.on{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+main{max-width:760px;margin:0 auto;padding:16px 16px 60px}
+details.notes{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 16px;margin-bottom:28px}
+details.notes summary{font-weight:700;cursor:pointer}
+details.notes ul{margin:10px 0 0;padding-left:20px;color:var(--mute);font-size:14px}details.notes li{margin:6px 0}
+section{margin-bottom:44px;scroll-margin-top:64px}
+.dayhead small{color:var(--mute);text-transform:uppercase;letter-spacing:.05em;font-size:12px}
+.dayhead h2{font:italic 600 24px/1.2 Georgia,serif;margin:2px 0 4px}
+.dayhead p{margin:0 0 10px;color:var(--mute);font-size:14px}
+.daymeta{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:14px;margin-bottom:18px}
+.daymeta a{font-weight:600}
+.stop{position:relative;margin:0 0 18px 0}
+.drive{font-size:13px;color:var(--mute);margin:0 0 6px 4px;display:flex;flex-wrap:wrap;gap:4px 12px}
+.drive a{font-weight:600}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px}
+.card.done{opacity:.55}
+.top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.title{font-weight:700;font-size:16px}
+.time{font-weight:700;color:var(--accent);white-space:nowrap;font-size:15px}
+.desc{margin:6px 0 10px;color:var(--mute);font-size:14px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;font-size:12px}
+.chip{border:1px solid var(--line);border-radius:999px;padding:3px 10px}
+.cat{border:0;font-weight:700;text-transform:uppercase;letter-spacing:.04em;font-size:11px;padding:4px 10px}
+.cost{margin:8px 0 0;font-size:12px;color:var(--mute)}
+.btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:6px;text-decoration:none;color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:9px 14px;font-size:14px;font-weight:600;min-height:40px}
+.btn.maps{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+label.chk{margin-left:auto;font-size:13px;color:var(--mute);display:flex;align-items:center;gap:6px;min-height:40px}
+label.chk input{width:20px;height:20px}
+footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--mute);font-size:12px}
+@media print{nav,.btns,label.chk{display:none}body{background:#fff}.card{break-inside:avoid}}
+</style>
+</head>
+<body>
+<header>
+  <h1 id="title"></h1>
+  <p class="sub" id="subtitle"></p>
+  <div class="stats" id="stats"></div>
+</header>
+<nav><div id="nav"></div></nav>
+<main>
+  <details class="notes" id="notes"><summary>Good to know</summary><ul id="noteList"></ul></details>
+  <div id="days"></div>
+</main>
+<footer>Costs are estimates in CHF for two people &mdash; verify prices and opening hours on the official sites. Ticks are saved on this device only.</footer>
+
+<script type="application/json" id="plan">{
+ "slug": "switzerland-oct-2026",
+ "title": "Switzerland, 16–19 Oct 2026",
+ "subtitle": "Two travelers, car all 4 days. Hotels: Seehotel Pilatus (nights of 16 & 17), Ruby Mimi Zurich (night of 18). Max 1.5h per drive, leaving the hotel around 10:00.",
+ "notes": [
+  "Flights (El Al, booking X4MLU5): LY347 TLV 06:25 → ZRH 09:45 on 16 Oct. LY344 ZRH 21:15 → TLV 02:10 on 20 Oct (be at the airport by ~18:15).",
+  "Costs are estimates for 2 people in CHF; verify on the official sites. Mid-October is shoulder season: confirm Pilatus, Trümmelbach, Rhine Falls boats and the Ebenalp cable car are running (some have annual maintenance closures).",
+  "Restaurant picks are suggestions from general knowledge — check opening hours and book Day 3 dinner. Sunday 18 Oct: shops closed, restaurants and attractions open.",
+  "Rental cars from Swiss locations normally include the motorway vignette; confirm with Sixt. Ask Ruby Mimi about parking for the car on the night of the 18th.",
+  "Not included: Schilthorn or Jungfraujoch (too long/expensive for the 1.5h driving rule), parking at hotels, souvenirs."
+ ],
+ "days": [
+  {
+   "date": "2026-10-16",
+   "title": "Arrival, Rhine Falls & Lucerne",
+   "summary": "Land, pick up the car, Europe's biggest waterfall, then Lucerne's old town and lake at sunset.",
+   "stops": [
+    {
+     "start": "09:45",
+     "durationMin": 90,
+     "title": "Land at Zurich Airport (LY347), passport control, bags",
+     "category": "flight",
+     "description": "Biometric EU Entry/Exit System may add queue time. Collect bags and head to the Sixt desk.",
+     "costChf": null,
+     "mapsQuery": "Zurich Airport Sixt car rental",
+     "searchQuery": "Zurich Airport Sixt car rental pickup"
+    },
+    {
+     "start": "11:15",
+     "durationMin": 15,
+     "title": "Pick up the Sixt rental car",
+     "category": "transport",
+     "description": "Check the car for damage, vignette sticker and fuel policy before leaving.",
+     "costChf": 0,
+     "costNote": "Already booked via Rentalcars.com",
+     "mapsQuery": "Sixt Zurich Airport",
+     "searchQuery": "Sixt Zurich Airport opening hours"
+    },
+    {
+     "start": "12:05",
+     "durationMin": 130,
+     "title": "Rhine Falls (Rheinfall), Neuhausen",
+     "category": "sightseeing",
+     "description": "Europe's largest waterfall. Viewing platforms at Schloss Laufen, then the boat to the rock in the middle of the falls (~30 min). Lunch at Schlössli Wörth with the falls as the backdrop.",
+     "costChf": 100,
+     "costNote": "Boat ~CHF 9–10 pp, castle platform ~CHF 5 pp, parking ~CHF 8, lunch ~CHF 60 for two",
+     "drive": {
+      "km": 30,
+      "min": 35
+     },
+     "mapsQuery": "Rheinfall Neuhausen Switzerland",
+     "searchQuery": "Rheinfall Neuhausen boat tickets Schlössli Wörth"
+    },
+    {
+     "start": "15:35",
+     "durationMin": 25,
+     "title": "Check in / drop bags at Seehotel Pilatus, Hergiswil",
+     "category": "lodging",
+     "description": "Lakeside hotel on Lake Lucerne. Drop bags and freshen up before heading to Lucerne.",
+     "costChf": null,
+     "costNote": "Hotel already booked",
+     "drive": {
+      "km": 90,
+      "min": 80
+     },
+     "mapsQuery": "Seehotel Pilatus Hergiswil",
+     "searchQuery": "Seehotel Pilatus Hergiswil"
+    },
+    {
+     "start": "16:15",
+     "durationMin": 135,
+     "title": "Lucerne old town: Chapel Bridge, Lion Monument, lake promenade",
+     "category": "sightseeing",
+     "description": "Kapellbrücke and Wasserturm (~45 min), old town squares and Jesuit church (~45 min), Lion Monument (~20 min), lakeside walk (~25 min) as the sun sets (~18:10).",
+     "costChf": 10,
+     "costNote": "Sights free; ~CHF 3–4/h parking garage",
+     "drive": {
+      "km": 10,
+      "min": 15
+     },
+     "mapsQuery": "Kapellbrücke Lucerne",
+     "searchQuery": "Lucerne Chapel Bridge Lion Monument walking tour"
+    },
+    {
+     "start": "18:30",
+     "durationMin": 90,
+     "title": "Dinner: Rathaus Brauerei, Lucerne",
+     "category": "food",
+     "description": "Swiss beer-hall classics on the Kornmarkt, mains ~CHF 30–40. Alternative: Zunfthaus Pfistern.",
+     "costChf": 90,
+     "costNote": "~CHF 90 for two with drinks",
+     "mapsQuery": "Rathaus Brauerei Lucerne",
+     "searchQuery": "Rathaus Brauerei Luzern menu reservation"
+    },
+    {
+     "start": "20:15",
+     "durationMin": 15,
+     "title": "Drive back to Seehotel Pilatus",
+     "category": "lodging",
+     "description": "Night 1 at the hotel.",
+     "costChf": null,
+     "drive": {
+      "km": 10,
+      "min": 15
+     },
+     "mapsQuery": "Seehotel Pilatus Hergiswil",
+     "searchQuery": "Seehotel Pilatus Hergiswil"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-17",
+   "title": "Jungfrau region: Aare Gorge, Lauterbrunnen & Stechelberg",
+   "summary": "Your own version of the Jungfrau day trips: gorge walk, waterfalls and the valley's viewpoints.",
+   "stops": [
+    {
+     "start": "10:00",
+     "durationMin": 5,
+     "title": "Leave Seehotel Pilatus",
+     "category": "lodging",
+     "description": "Drive over the Brünig pass towards Meiringen.",
+     "costChf": null,
+     "mapsQuery": "Seehotel Pilatus Hergiswil",
+     "searchQuery": "Seehotel Pilatus Hergiswil"
+    },
+    {
+     "start": "11:00",
+     "durationMin": 75,
+     "title": "Aare Gorge (Aareschlucht), Meiringen",
+     "category": "sightseeing",
+     "description": "1.4 km walk on catwalks cut into the limestone walls above the Aare river. Easy, mostly flat, about an hour.",
+     "costChf": 32,
+     "costNote": "~CHF 10–11 pp entry, ~CHF 8–10 parking",
+     "drive": {
+      "km": 45,
+      "min": 55
+     },
+     "mapsQuery": "Aareschlucht Meiringen",
+     "searchQuery": "Aareschlucht Meiringen opening hours tickets"
+    },
+    {
+     "start": "12:15",
+     "durationMin": 45,
+     "title": "Lunch in Meiringen",
+     "category": "food",
+     "description": "Home of the meringue — try one for dessert. Casual café or Gasthof in the centre.",
+     "costChf": 60,
+     "costNote": "~CHF 60 for two",
+     "drive": {
+      "km": 3,
+      "min": 8
+     },
+     "mapsQuery": "Meiringen restaurant centre",
+     "searchQuery": "Meiringen meringue restaurant lunch"
+    },
+    {
+     "start": "13:50",
+     "durationMin": 25,
+     "title": "Staubbach Falls, Lauterbrunnen",
+     "category": "sightseeing",
+     "description": "A 270 m waterfall right beside the village; a short stroll from the parking lot with the classic valley view.",
+     "costChf": 10,
+     "costNote": "Free; parking ~CHF 10/day",
+     "drive": {
+      "km": 40,
+      "min": 50
+     },
+     "mapsQuery": "Staubbach Falls Lauterbrunnen",
+     "searchQuery": "Staubbachfall Lauterbrunnen viewpoint"
+    },
+    {
+     "start": "14:30",
+     "durationMin": 75,
+     "title": "Trümmelbach Falls",
+     "category": "sightseeing",
+     "description": "Ten glacier-fed waterfalls thundering inside the mountain, reached by tunnel lift and walkways. Last entry is late afternoon and it closes for the season in early November.",
+     "costChf": 34,
+     "costNote": "~CHF 16–17 pp",
+     "drive": {
+      "km": 3,
+      "min": 6
+     },
+     "mapsQuery": "Trümmelbach Falls",
+     "searchQuery": "Trümmelbachfälle opening hours tickets"
+    },
+    {
+     "start": "15:50",
+     "durationMin": 40,
+     "title": "Stechelberg viewpoint & end of the valley",
+     "category": "sightseeing",
+     "description": "Quiet end of the Lauterbrunnen valley below the Schilthorn cable car. Short walk and photos of the cliffs and falls.",
+     "costChf": 5,
+     "costNote": "Parking ~CHF 5",
+     "drive": {
+      "km": 4,
+      "min": 8
+     },
+     "mapsQuery": "Stechelberg Switzerland",
+     "searchQuery": "Stechelberg viewpoint Lauterbrunnen valley walk"
+    },
+    {
+     "start": "16:30",
+     "durationMin": 90,
+     "title": "Drive back to Hergiswil via Interlaken & Brünig",
+     "category": "transport",
+     "description": "Longest drive of the trip, right at the 1.5h limit. Optional coffee stop in Interlaken.",
+     "costChf": null,
+     "drive": {
+      "km": 85,
+      "min": 90
+     },
+     "mapsQuery": "Seehotel Pilatus Hergiswil",
+     "searchQuery": "Interlaken to Hergiswil drive"
+    },
+    {
+     "start": "18:45",
+     "durationMin": 90,
+     "title": "Dinner: Zunfthaus Pfistern, Lucerne",
+     "category": "food",
+     "description": "Historic guild house on the Reuss with traditional Swiss cooking. Fallback: the Seehotel's own restaurant if you're tired.",
+     "costChf": 100,
+     "costNote": "~CHF 100 for two",
+     "drive": {
+      "km": 10,
+      "min": 15
+     },
+     "mapsQuery": "Zunfthaus Pfistern Lucerne",
+     "searchQuery": "Zunfthaus zu Pfistern Luzern menu reservation"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-18",
+   "title": "Mt Pilatus, Zug & Zurich",
+   "summary": "Cog railway to Pilatus Kulm, the lakeside town of Zug, then settle into Zurich for the evening.",
+   "stops": [
+    {
+     "start": "09:45",
+     "durationMin": 15,
+     "title": "Check out of Seehotel Pilatus",
+     "category": "lodging",
+     "description": "Load the luggage into the car.",
+     "costChf": null,
+     "mapsQuery": "Seehotel Pilatus Hergiswil",
+     "searchQuery": "Seehotel Pilatus Hergiswil"
+    },
+    {
+     "start": "10:15",
+     "durationMin": 195,
+     "title": "Mt Pilatus (Pilatus Kulm) via the cog railway",
+     "category": "activity",
+     "description": "World's steepest cog railway from Alpnachstad (~30–40 min each way). About 2 hours at the summit for the viewpoints, the Dragon Trail and lunch. Ride back down the same way since the car is at the station.",
+     "costChf": 216,
+     "costNote": "Return ticket ~CHF 78 pp (~CHF 156), lunch ~CHF 60, parking free/low",
+     "drive": {
+      "km": 6,
+      "min": 10
+     },
+     "mapsQuery": "Pilatus Bahn Alpnachstad",
+     "searchQuery": "Pilatus cog railway Alpnachstad tickets timetable October"
+    },
+    {
+     "start": "14:20",
+     "durationMin": 100,
+     "title": "Zug old town & lakeside",
+     "category": "sightseeing",
+     "description": "Zytturm clock tower, Fischmarkt and promenade. Try the local Zuger Kirschtorte (cherry cake) at a café.",
+     "costChf": 25,
+     "costNote": "Café ~CHF 20, parking ~CHF 5",
+     "drive": {
+      "km": 40,
+      "min": 50
+     },
+     "mapsQuery": "Zug Altstadt Zytturm",
+     "searchQuery": "Zug old town Zytturm Kirschtorte café"
+    },
+    {
+     "start": "16:45",
+     "durationMin": 45,
+     "title": "Check in at Ruby Mimi Hotel Zurich",
+     "category": "lodging",
+     "description": "Ask about parking for the rental car (may be an extra charge).",
+     "costChf": 35,
+     "costNote": "Parking estimate ~CHF 30–40/night, verify",
+     "drive": {
+      "km": 30,
+      "min": 35
+     },
+     "mapsQuery": "Ruby Mimi Hotel Zurich",
+     "searchQuery": "Ruby Mimi Hotel Zurich parking"
+    },
+    {
+     "start": "17:45",
+     "durationMin": 90,
+     "title": "Lindenhof, Grossmünster & Niederdorf stroll",
+     "category": "sightseeing",
+     "description": "Lindenhof viewpoint over the old town at sunset (~18:10), Grossmünster, the Limmat river and the Niederdorf lanes. Take tram or taxi from the hotel.",
+     "costChf": 10,
+     "costNote": "Tram ~CHF 5 pp",
+     "mapsQuery": "Lindenhof Zurich",
+     "searchQuery": "Zurich Lindenhof Grossmünster Niederdorf walking route"
+    },
+    {
+     "start": "19:30",
+     "durationMin": 90,
+     "title": "Dinner: Zeughauskeller, Zurich",
+     "category": "food",
+     "description": "Huge historic arsenal hall on Paradeplatz with Swiss classics and generous portions, ~CHF 30 mains. Alternative: Swiss Chuchi for fondue.",
+     "costChf": 80,
+     "costNote": "~CHF 80 for two",
+     "mapsQuery": "Zeughauskeller Zurich",
+     "searchQuery": "Zeughauskeller Zürich menu reservation"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-19",
+   "title": "Appenzell & flight home",
+   "summary": "Painted villages and a cliffside cave chapel, then back to the airport for the 21:15 flight.",
+   "stops": [
+    {
+     "start": "09:45",
+     "durationMin": 15,
+     "title": "Check out of Ruby Mimi, load the car",
+     "category": "lodging",
+     "description": "Luggage stays in the car for the whole day.",
+     "costChf": null,
+     "mapsQuery": "Ruby Mimi Hotel Zurich",
+     "searchQuery": "Ruby Mimi Hotel Zurich"
+    },
+    {
+     "start": "11:30",
+     "durationMin": 135,
+     "title": "Ebenalp & Wildkirchli cave chapel",
+     "category": "activity",
+     "description": "Cable car from Wasserauen up to Ebenalp, then a short walk to the Wildkirchli caves and the cliff-hugging Berggasthaus Aescher (lunch: rösti, cheese, local beer).",
+     "costChf": 115,
+     "costNote": "Cable car return ~CHF 30–33 pp (~CHF 65), lunch ~CHF 45, parking ~CHF 5",
+     "drive": {
+      "km": 100,
+      "min": 85
+     },
+     "mapsQuery": "Ebenalp Bergbahn Wasserauen",
+     "searchQuery": "Ebenalp Wildkirchli Aescher cable car tickets"
+    },
+    {
+     "start": "14:15",
+     "durationMin": 90,
+     "title": "Appenzell village + early dinner",
+     "category": "sightseeing",
+     "description": "Painted facades on Hauptgasse, Appenzeller cheese and the spiced Biber cake (~45 min), then an early dinner, e.g. at the Hotel Säntis restaurant (~45 min), since there's no time for a proper dinner near the airport.",
+     "costChf": 85,
+     "costNote": "Dinner ~CHF 70 + treats ~CHF 15",
+     "drive": {
+      "km": 5,
+      "min": 10
+     },
+     "mapsQuery": "Appenzell Hauptgasse",
+     "searchQuery": "Appenzell village Hauptgasse cheese Biber restaurant"
+    },
+    {
+     "start": "15:45",
+     "durationMin": 80,
+     "title": "Drive to Zurich Airport & return the Sixt car",
+     "category": "transport",
+     "description": "Refuel before returning the car. Allow buffer for Monday traffic around Zurich.",
+     "costChf": 20,
+     "costNote": "Fuel top-up estimate",
+     "drive": {
+      "km": 100,
+      "min": 80
+     },
+     "mapsQuery": "Sixt car return Zurich Airport",
+     "searchQuery": "Sixt Zurich Airport car return location"
+    },
+    {
+     "start": "18:15",
+     "durationMin": 180,
+     "title": "Check in & fly home (LY344, 21:15)",
+     "category": "flight",
+     "description": "Arrives Tel Aviv 02:10 on 20 Oct.",
+     "costChf": null,
+     "mapsQuery": "Zurich Airport Terminal 1 departures",
+     "searchQuery": "Zurich Airport El Al check-in LY344"
+    }
+   ]
+  }
+ ]
+}</script>
+<script>
+(function(){
+var plan=JSON.parse(document.getElementById('plan').textContent);
+var CAT={sightseeing:['🏛️','Sightseeing','sight'],food:['🍽️','Food','food'],transport:['🚗','Transport','transport'],
+lodging:['🛏️','Lodging','lodging'],activity:['🧭','Activity','activity'],flight:['✈️','Flight','flight']};
+var DAYS=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],FULL=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+var MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+function $(id){return document.getElementById(id)}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function dur(m){var h=Math.floor(m/60),r=m%60;return h?(r?h+'h '+r+'m':h+'h'):r+' min'}
+function mins(t){var p=t.split(':');return +p[0]*60+ +p[1]}
+function hhmm(total){total=total%1440;return String(Math.floor(total/60)).padStart(2,'0')+':'+String(total%60).padStart(2,'0')}
+function t12(t){var p=t.split(':'),h=+p[0];return (h%12||12)+':'+p[1]+' '+(h>=12?'PM':'AM')}
+function dparts(s){var p=s.split('-');var d=new Date(+p[0],+p[1]-1,+p[2]);return {wd:d.getDay(),d:+p[2],m:MON[+p[1]-1]}}
+function search(q){return 'https://www.google.com/search?q='+encodeURIComponent(q)}
+function place(q){return 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q)}
+function dir(o,d,w){var u='https://www.google.com/maps/dir/?api=1&origin='+encodeURIComponent(o)+'&destination='+encodeURIComponent(d)+'&travelmode=driving';
+ if(w&&w.length)u+='&waypoints='+w.map(encodeURIComponent).join('%7C');return u}
+var store={get:function(k){try{return localStorage.getItem(k)}catch(e){return null}},set:function(k,v){try{v?localStorage.setItem(k,'1'):localStorage.removeItem(k)}catch(e){}}};
+
+var G={cost:0,km:0,min:0};
+plan.days.forEach(function(d){d.stops.forEach(function(s){G.cost+=s.costChf||0;if(s.drive){G.km+=s.drive.km;G.min+=s.drive.min}})});
+$('title').textContent=plan.title;$('subtitle').textContent=plan.subtitle;
+$('stats').innerHTML='<div class="stat"><b>CHF '+G.cost+'</b><span>Est. total (2)</span></div><div class="stat"><b>'+G.km+' km</b><span>Driving</span></div><div class="stat"><b>'+dur(G.min)+'</b><span>Drive time</span></div>';
+$('noteList').innerHTML=plan.notes.map(function(n){return '<li>'+esc(n)+'</li>'}).join('');
+
+var nav='',html='';
+plan.days.forEach(function(day,i){
+ var p=dparts(day.date),id='day'+(i+1);
+ nav+='<a href="#'+id+'" data-id="'+id+'">Day '+(i+1)+' · '+DAYS[p.wd]+' '+p.d+'</a>';
+ var c=0,km=0,mn=0;day.stops.forEach(function(s){c+=s.costChf||0;if(s.drive){km+=s.drive.km;mn+=s.drive.min}});
+ var first=day.stops[0],last=day.stops[day.stops.length-1];
+ var mid=day.stops.slice(1,-1).map(function(s){return s.mapsQuery}).slice(0,9);
+ html+='<section id="'+id+'"><div class="dayhead"><small>Day '+(i+1)+' · '+FULL[p.wd]+', '+p.m+' '+p.d+'</small><h2>'+esc(day.title)+'</h2><p>'+esc(day.summary)+'</p></div>'+
+ '<div class="daymeta"><span>💰 ~CHF '+c+'</span><span>🚗 '+km+' km · '+dur(mn)+'</span><a href="'+dir(first.mapsQuery,last.mapsQuery,mid)+'" target="_blank" rel="noopener">🗺️ Full day route in Google Maps</a></div>';
+ day.stops.forEach(function(s,j){
+  var cat=CAT[s.category]||CAT.activity,key=plan.slug+':'+day.date+':'+s.start,prev=day.stops[j-1],done=!!store.get(key);
+  html+='<div class="stop">';
+  if(s.drive&&prev)html+='<div class="drive"><span>🚗 '+s.drive.km+' km · '+dur(s.drive.min)+' drive</span><a href="'+dir(prev.mapsQuery,s.mapsQuery)+'" target="_blank" rel="noopener">Directions</a></div>';
+  html+='<div class="card'+(done?' done':'')+'" data-key="'+esc(key)+'"><div class="top"><div class="title">'+cat[0]+' '+esc(s.title)+'</div><div class="time">'+t12(s.start)+'</div></div>'+
+  '<p class="desc">'+esc(s.description)+'</p><div class="chips"><span class="chip cat" style="background:var(--'+cat[2]+');color:var(--'+cat[2]+'-i)">'+cat[1]+'</span>'+
+  '<span class="chip">⏱ '+dur(s.durationMin)+' · until '+t12(hhmm(mins(s.start)+s.durationMin))+'</span>'+
+  (s.costChf===null||s.costChf===undefined?'':'<span class="chip">'+(s.costChf===0?'Free':'~CHF '+s.costChf)+'</span>')+'</div>'+
+  (s.costNote?'<p class="cost">'+esc(s.costNote)+'</p>':'')+
+  '<div class="btns"><a class="btn maps" href="'+place(s.mapsQuery)+'" target="_blank" rel="noopener">📍 Google Maps</a><a class="btn" href="'+search(s.searchQuery)+'" target="_blank" rel="noopener">🔎 Google Search</a>'+
+  '<label class="chk"><input type="checkbox"'+(done?' checked':'')+'> Done</label></div></div></div>';
+ });
+ html+='</section>';
+});
+$('nav').innerHTML=nav;$('days').innerHTML=html;
+
+document.addEventListener('change',function(e){
+ if(e.target.type!=='checkbox')return;var card=e.target.closest('.card');
+ card.classList.toggle('done',e.target.checked);store.set(card.getAttribute('data-key'),e.target.checked);
+});
+var links=[].slice.call(document.querySelectorAll('nav a'));
+if('IntersectionObserver' in window){
+ var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(l){var on=l.getAttribute('data-id')===en.target.id;l.classList.toggle('on',on);if(on&&l.scrollIntoView)l.scrollIntoView({block:'nearest',inline:'center'})})}})},{rootMargin:'-20% 0px -70% 0px'});
+ [].slice.call(document.querySelectorAll('section')).forEach(function(s){io.observe(s)});
+}
+})();
+</script>
+</body>
+</html>

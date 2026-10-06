@@ -693,7 +693,7 @@ main{max-width:760px;margin:0 auto;padding:16px 16px 60px}
 details.notes{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 16px;margin-bottom:28px}
 details.notes summary{font-weight:700;cursor:pointer}
 details.notes ul{margin:10px 0 0;padding-left:20px;color:var(--mute);font-size:14px}details.notes li{margin:6px 0}
-section{margin-bottom:44px;scroll-margin-top:64px}
+section{margin-bottom:44px;scroll-margin-top:112px}
 .dayhead small{color:var(--mute);text-transform:uppercase;letter-spacing:.05em;font-size:12px}
 .dayhead h2{font:italic 600 24px/1.2 Georgia,serif;margin:2px 0 4px}
 .dayhead p{margin:0 0 10px;color:var(--mute);font-size:14px}
@@ -724,7 +724,12 @@ details.links{margin-bottom:16px}
 .links a.lk i{font-style:normal;font-size:22px}
 .links a.lk b{display:block}.links a.lk span{display:block;font-size:13px;color:var(--mute)}
 .links a.lk::after{content:"↗";margin-left:auto;color:var(--accent);font-weight:700}
-#mapwrap{margin-bottom:32px;scroll-margin-top:64px}
+#catfilters{margin-top:8px}
+#catfilters button{flex:0 0 auto;font:inherit;font-size:13px;font-weight:600;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 12px;cursor:pointer}
+#catfilters button.on{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.stop.hide,section.hide{display:none}
+.nomatch{color:var(--mute);font-size:14px;padding:8px 0}
+#mapwrap{margin-bottom:32px;scroll-margin-top:112px}
 #mapwrap h2{font:italic 600 24px/1.2 Georgia,serif;margin:0 0 10px}
 #filters{display:flex;gap:8px;overflow-x:auto;margin-bottom:10px}
 #filters button{flex:0 0 auto;font:inherit;font-size:14px;font-weight:600;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer}
@@ -734,7 +739,7 @@ details.links{margin-bottom:16px}
 .pin{width:26px;height:26px;border-radius:50%;color:#fff;font:700 12px/22px system-ui,sans-serif;text-align:center;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.45)}
 .leaflet-popup-content{font:14px/1.4 system-ui,sans-serif;margin:10px 12px;color:#1d2428}
 .leaflet-popup-content a{font-weight:600}
-@media print{#mapwrap{display:none}nav,.btns,label.chk{display:none}body{background:#fff}.card{break-inside:avoid}}
+@media print{#mapwrap{display:none}#catfilters{display:none}nav,.btns,label.chk{display:none}body{background:#fff}.card{break-inside:avoid}}
 </style>
 </head>
 <body>
@@ -743,7 +748,7 @@ details.links{margin-bottom:16px}
   <p class="sub" id="subtitle"></p>
   <div class="stats" id="stats"></div>
 </header>
-<nav><div id="nav"></div></nav>
+<nav><div id="nav"></div><div id="catfilters"></div></nav>
 <main>
   <details class="notes" id="notes"><summary>Good to know</summary><ul id="noteList"></ul></details>
   <details class="notes links" id="links"></details>
@@ -802,18 +807,31 @@ details.links{margin-bottom:16px}
     },
     {
      "start": "11:55",
-     "durationMin": 125,
+     "durationMin": 80,
      "title": "Lindt Home of Chocolate, Kilchberg",
      "category": "activity",
-     "description": "Chocolate museum on Lake Zurich with a 9 m chocolate fountain, the story of chocolate from bean to bar, and tastings. Lunch at the Lindt café on site. Book a timed ticket online if possible.",
-     "costChf": 75,
-     "costNote": "Entry ~CHF 15 pp (~CHF 30), lunch at the café ~CHF 40, parking ~CHF 5 (verify prices)",
+     "description": "Chocolate museum on Lake Zurich with a 9 m chocolate fountain, the story of chocolate from bean to bar, and tastings. Book a timed ticket online if possible.",
+     "costChf": 35,
+     "costNote": "Entry ~CHF 15 pp (~CHF 30), parking ~CHF 5 (verify prices)",
      "drive": {
       "km": 22,
       "min": 25
      },
      "mapsQuery": "Lindt Home of Chocolate Kilchberg",
      "searchQuery": "Lindt Home of Chocolate Kilchberg tickets opening hours",
+     "lat": 47.3235,
+     "lng": 8.5543
+    },
+    {
+     "start": "13:15",
+     "durationMin": 45,
+     "title": "Lunch at the Lindt café, Kilchberg",
+     "category": "food",
+     "description": "Light lunch or sandwiches and cake at the café inside Home of Chocolate.",
+     "costChf": 40,
+     "costNote": "~CHF 40 for two",
+     "mapsQuery": "Lindt Home of Chocolate Kilchberg",
+     "searchQuery": "Lindt Home of Chocolate Kilchberg café",
      "lat": 47.3235,
      "lng": 8.5543
     },
@@ -1038,12 +1056,12 @@ details.links{margin-bottom:16px}
     },
     {
      "start": "10:15",
-     "durationMin": 195,
+     "durationMin": 120,
      "title": "Mt Pilatus (Pilatus Kulm) via the cog railway",
      "category": "activity",
-     "description": "World's steepest cog railway from Alpnachstad (~30–40 min each way). About 2 hours at the summit for the viewpoints, the Dragon Trail and lunch. Ride back down the same way since the car is at the station.",
-     "costChf": 216,
-     "costNote": "Return ticket ~CHF 78 pp (~CHF 156), lunch ~CHF 60, parking free/low",
+     "description": "World's steepest cog railway from Alpnachstad (~30–40 min up). Viewpoints at the summit and the Dragon Trail.",
+     "costChf": 156,
+     "costNote": "Return ticket ~CHF 78 pp, parking free/low (verify)",
      "drive": {
       "km": 6,
       "min": 10
@@ -1052,6 +1070,19 @@ details.links{margin-bottom:16px}
      "searchQuery": "Pilatus cog railway Alpnachstad tickets timetable October",
      "lat": 46.9681,
      "lng": 8.2717
+    },
+    {
+     "start": "12:15",
+     "durationMin": 75,
+     "title": "Lunch at Pilatus Kulm, then cog railway back down",
+     "category": "food",
+     "description": "Lunch with the view at the summit restaurant, then ride the cog railway back down to the car at Alpnachstad.",
+     "costChf": 60,
+     "costNote": "~CHF 60 for two",
+     "mapsQuery": "Pilatus Kulm",
+     "searchQuery": "Pilatus Kulm restaurant",
+     "lat": 46.9791,
+     "lng": 8.2536
     },
     {
      "start": "14:20",
@@ -1134,12 +1165,12 @@ details.links{margin-bottom:16px}
     },
     {
      "start": "11:30",
-     "durationMin": 135,
+     "durationMin": 90,
      "title": "Ebenalp & Wildkirchli cave chapel",
      "category": "activity",
-     "description": "Cable car from Wasserauen up to Ebenalp, then a short walk to the Wildkirchli caves and the cliff-hugging Berggasthaus Aescher (lunch: rösti, cheese, local beer).",
-     "costChf": 115,
-     "costNote": "Cable car return ~CHF 30–33 pp (~CHF 65), lunch ~CHF 45, parking ~CHF 5",
+     "description": "Cable car from Wasserauen up to Ebenalp, then a short walk to the Wildkirchli caves and the cliff-hugging Berggasthaus Aescher.",
+     "costChf": 70,
+     "costNote": "Cable car return ~CHF 30–33 pp (~CHF 65), parking ~CHF 5",
      "drive": {
       "km": 100,
       "min": 85
@@ -1150,13 +1181,26 @@ details.links{margin-bottom:16px}
      "lng": 9.4175
     },
     {
+     "start": "13:00",
+     "durationMin": 45,
+     "title": "Lunch at Berggasthaus Aescher",
+     "category": "food",
+     "description": "Famous cliffside guesthouse: rösti, cheese and local beer.",
+     "costChf": 45,
+     "costNote": "~CHF 45 for two",
+     "mapsQuery": "Berggasthaus Aescher",
+     "searchQuery": "Berggasthaus Aescher Wildkirchli menu",
+     "lat": 47.285,
+     "lng": 9.4097
+    },
+    {
      "start": "14:15",
-     "durationMin": 90,
-     "title": "Appenzell village + early dinner",
+     "durationMin": 45,
+     "title": "Appenzell village",
      "category": "sightseeing",
-     "description": "Painted facades on Hauptgasse, Appenzeller cheese and the spiced Biber cake (~45 min), then an early dinner, e.g. at the Hotel Säntis restaurant (~45 min), since there's no time for a proper dinner near the airport.",
-     "costChf": 85,
-     "costNote": "Dinner ~CHF 70 + treats ~CHF 15",
+     "description": "Painted facades on Hauptgasse, Appenzeller cheese and the spiced Biber honey cake.",
+     "costChf": 15,
+     "costNote": "Cheese and Biber cake ~CHF 15",
      "drive": {
       "km": 5,
       "min": 10
@@ -1165,6 +1209,19 @@ details.links{margin-bottom:16px}
      "searchQuery": "Appenzell village Hauptgasse cheese Biber restaurant",
      "lat": 47.3308,
      "lng": 9.4093
+    },
+    {
+     "start": "15:00",
+     "durationMin": 45,
+     "title": "Early dinner in Appenzell (e.g. Hotel Säntis)",
+     "category": "food",
+     "description": "An early dinner here, since there's no time for a proper dinner near the airport.",
+     "costChf": 70,
+     "costNote": "~CHF 70 for two",
+     "mapsQuery": "Hotel Säntis Appenzell",
+     "searchQuery": "Hotel Säntis Appenzell restaurant menu",
+     "lat": 47.3306,
+     "lng": 9.4099
     },
     {
      "start": "15:45",
@@ -1240,8 +1297,9 @@ details.links{margin-bottom:16px}
 <script>
 (function(){
 var plan=JSON.parse(document.getElementById('plan').textContent);
-var CAT={sightseeing:['🏛️','Sightseeing','sight'],food:['🍽️','Food','food'],transport:['🚗','Transport','transport'],
-lodging:['🛏️','Lodging','lodging'],activity:['🧭','Activity','activity'],flight:['✈️','Flight','flight']};
+var CAT={sightseeing:['🏞️','View','sight'],food:['🍽️','Eat','food'],transport:['🚗','Drive','transport'],
+lodging:['🛏️','Hotel','lodging'],activity:['🧭','Activity','activity'],flight:['✈️','Flight','flight']};
+var CAT_ORDER=['food','sightseeing','activity','transport','lodging','flight'];
 var DAYS=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],FULL=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 var MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 function $(id){return document.getElementById(id)}
@@ -1275,7 +1333,7 @@ plan.days.forEach(function(day,i){
  '<div class="daymeta"><span>💰 ~CHF '+c+'</span><span>🚗 '+km+' km · '+dur(mn)+'</span><a href="'+dir(first.mapsQuery,last.mapsQuery,mid)+'" target="_blank" rel="noopener">🗺️ Full day route in Google Maps</a></div>';
  day.stops.forEach(function(s,j){
   var cat=CAT[s.category]||CAT.activity,key=plan.slug+':'+day.date+':'+s.start,prev=day.stops[j-1],done=!!store.get(key);
-  html+='<div class="stop">';
+  html+='<div class="stop" data-cat="'+s.category+'">';
   if(s.drive&&prev)html+='<div class="drive"><span>🚗 '+s.drive.km+' km · '+dur(s.drive.min)+' drive</span><a href="'+dir(prev.mapsQuery,s.mapsQuery)+'" target="_blank" rel="noopener">Directions</a></div>';
   html+='<div class="card'+(done?' done':'')+'" data-key="'+esc(key)+'"><div class="top"><div class="title">'+cat[0]+' '+esc(s.title)+'</div><div class="time">'+t12(s.start)+'</div></div>'+
   '<p class="desc">'+esc(s.description)+'</p><div class="chips"><span class="chip cat" style="background:var(--'+cat[2]+');color:var(--'+cat[2]+'-i)">'+cat[1]+'</span>'+
@@ -1298,38 +1356,62 @@ if('IntersectionObserver' in window){
  var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(l){var on=l.getAttribute('data-id')===en.target.id;l.classList.toggle('on',on);if(on&&l.scrollIntoView)l.scrollIntoView({block:'nearest',inline:'center'})})}})},{rootMargin:'-20% 0px -70% 0px'});
  [].slice.call(document.querySelectorAll('section')).forEach(function(s){io.observe(s)});
 }
-/* ---- map ---- */
-var COLORS=['#d1495b','#2e86ab','#e08a00','#4c9a2a'],markers={},groups=[],map=null;
+/* ---- category filters + map ---- */
+var COLORS=['#d1495b','#2e86ab','#e08a00','#4c9a2a'],markers={},groups=[],map=null,dayFilter='all',sel={};
+function catOn(c){var any=Object.keys(sel).some(function(k){return sel[k]});return !any||!!sel[c]}
+(function buildCatFilters(){
+ var counts={},total=0;
+ plan.days.forEach(function(d){d.stops.forEach(function(s){counts[s.category]=(counts[s.category]||0)+1;total++})});
+ var h='<button class="on" data-c="all">All '+total+'</button>';
+ CAT_ORDER.forEach(function(c){if(counts[c])h+='<button data-c="'+c+'">'+CAT[c][0]+' '+CAT[c][1]+' '+counts[c]+'</button>'});
+ $('catfilters').innerHTML=h;
+ $('catfilters').addEventListener('click',function(e){
+  var b=e.target.closest('button');if(!b)return;var c=b.getAttribute('data-c');
+  if(c==='all')sel={};else sel[c]=!sel[c];
+  var any=Object.keys(sel).some(function(k){return sel[k]});
+  [].slice.call(this.children).forEach(function(x){var k=x.getAttribute('data-c');x.classList.toggle('on',k==='all'?!any:!!sel[k])});
+  applyCats();
+ });
+})();
+function applyCats(){
+ [].slice.call(document.querySelectorAll('.stop')).forEach(function(el){el.classList.toggle('hide',!catOn(el.getAttribute('data-cat')))});
+ [].slice.call(document.querySelectorAll('#days section')).forEach(function(sec){
+  var vis=sec.querySelectorAll('.stop:not(.hide)').length;sec.classList.toggle('hide',vis===0)});
+ if(map)refreshMap();
+}
+function visibleStops(i){return plan.days[i].stops.map(function(s,j){return {s:s,j:j}}).filter(function(x){return catOn(x.s.category)})}
+function refreshMap(){
+ var all=[];markers={};
+ groups.forEach(function(g,i){
+  g.clearLayers();map.removeLayer(g);
+  if(dayFilter!=='all'&&+dayFilter!==i)return;
+  var pts=[];
+  visibleStops(i).forEach(function(x,n){
+   var s=x.s,ll=[s.lat,s.lng];pts.push(ll);
+   var ic=L.divIcon({className:'',html:'<div class="pin" style="background:'+COLORS[i%4]+'">'+(n+1)+'</div>',iconSize:[26,26],iconAnchor:[13,13],popupAnchor:[0,-12]});
+   var m=L.marker(ll,{icon:ic}).bindPopup('<b>Day '+(i+1)+' · '+t12(s.start)+'</b> · '+CAT[s.category][1]+'<br>'+esc(s.title)+'<br><a target="_blank" rel="noopener" href="'+place(s.mapsQuery)+'">Open in Google Maps</a>');
+   g.addLayer(m);markers[i+'-'+x.j]=m;
+  });
+  if(pts.length>1)g.addLayer(L.polyline(pts,{color:COLORS[i%4],weight:3,opacity:.7,dashArray:'6 6'}));
+  g.addTo(map);all=all.concat(pts);
+ });
+ if(all.length)map.fitBounds(L.latLngBounds(all),{padding:[30,30]});
+}
 function initMap(){
  if(!window.L){$('map').innerHTML='<p style="padding:16px;color:var(--mute)">The map could not load. The Google Maps buttons on each stop still work.</p>';return}
  map=L.map('map',{scrollWheelZoom:false}).setView([47.0,8.4],8);
  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
  var f='<button class="on" data-f="all">All days</button>';
- plan.days.forEach(function(day,i){
-  var pts=[],g=L.layerGroup();
-  day.stops.forEach(function(s,j){
-   var ll=[s.lat,s.lng];pts.push(ll);
-   var ic=L.divIcon({className:'',html:'<div class="pin" style="background:'+COLORS[i%4]+'">'+(j+1)+'</div>',iconSize:[26,26],iconAnchor:[13,13],popupAnchor:[0,-12]});
-   var m=L.marker(ll,{icon:ic}).bindPopup('<b>Day '+(i+1)+' · '+t12(s.start)+'</b><br>'+esc(s.title)+'<br><a target="_blank" rel="noopener" href="'+place(s.mapsQuery)+'">Open in Google Maps</a>');
-   g.addLayer(m);markers[i+'-'+j]=m;
-  });
-  g.addLayer(L.polyline(pts,{color:COLORS[i%4],weight:3,opacity:.7,dashArray:'6 6'}));
-  groups.push({g:g,pts:pts});
-  f+='<button data-f="'+i+'"><span style="color:'+COLORS[i%4]+'">●</span> Day '+(i+1)+'</button>';
- });
+ plan.days.forEach(function(day,i){groups.push(L.layerGroup());f+='<button data-f="'+i+'"><span style="color:'+COLORS[i%4]+'">●</span> Day '+(i+1)+'</button>'});
  $('filters').innerHTML=f;
- $('mapnote').textContent='Pin positions are approximate and dashed lines are straight connections, not driving routes. Use the Google Maps buttons for exact places and directions.';
- function show(which){
-  var all=[];groups.forEach(function(x,i){var on=which==='all'||+which===i;if(on){x.g.addTo(map);all=all.concat(x.pts)}else map.removeLayer(x.g)});
-  map.fitBounds(L.latLngBounds(all),{padding:[30,30]});
- }
+ $('mapnote').textContent='Pin positions are approximate and dashed lines are straight connections, not driving routes. Pins follow the category filter at the top. Use the Google Maps buttons for exact places and directions.';
  $('filters').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
-  [].slice.call(this.children).forEach(function(c){c.classList.toggle('on',c===b)});show(b.getAttribute('data-f'))});
- show('all');
+  [].slice.call(this.children).forEach(function(c){c.classList.toggle('on',c===b)});dayFilter=b.getAttribute('data-f');refreshMap()});
+ refreshMap();
  document.addEventListener('click',function(e){var b=e.target.closest('[data-map]');if(!b)return;
-  var k=b.getAttribute('data-map'),d=k.split('-')[0],m=markers[k];if(!m)return;
-  var cur=document.querySelector('#filters .on');
-  if(cur&&cur.getAttribute('data-f')!=='all'&&cur.getAttribute('data-f')!==d){document.querySelector('#filters [data-f="all"]').click()}
+  var k=b.getAttribute('data-map'),d=k.split('-')[0];
+  if(dayFilter!=='all'&&dayFilter!==d){dayFilter='all';[].slice.call($('filters').children).forEach(function(c){c.classList.toggle('on',c.getAttribute('data-f')==='all')});refreshMap()}
+  var m=markers[k];if(!m)return;
   $('mapwrap').scrollIntoView({behavior:'smooth'});map.setView(m.getLatLng(),12);m.openPopup();
  });
 }

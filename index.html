@@ -769,7 +769,8 @@ details.links{margin-bottom:16px}
  "subtitle": "Two travelers, car all 4 days. Hotels: Seehotel Pilatus (nights of 16 & 17), Ruby Mimi Zurich (night of 18). Max 1.5h per drive, leaving the hotel around 10:00.",
  "notes": [
   "Flights (El Al, booking X4MLU5): LY347 TLV 06:25 → ZRH 09:45 on 16 Oct. LY344 ZRH 21:15 → TLV 02:10 on 20 Oct (be at the airport by ~18:15).",
-  "Costs are estimates for 2 people in CHF; verify on the official sites. Mid-October is shoulder season: confirm Rigi, Pilatus, Trümmelbach and the Uetliberg railway (S10) are running (some have annual maintenance closures).",
+  "Costs are estimates for 2 people in CHF; verify on the official sites. Mid-October is shoulder season: confirm Titlis, Pilatus, Trümmelbach and the Uetliberg railway (S10) are running (some have annual maintenance closures).",
+  "Mt Titlis: last ascent ~16:00 and last descent ~17:00 (the Rotair is closed for maintenance in October, the ride up uses the Titlis Connect cable car). The weather decides the views: check the Titlis webcam on the morning, and keep Day 3's Pilatus as the flexible swap if Day 1 is cloudy.",
   "Restaurant picks are suggestions from general knowledge — check opening hours and book the Day 3 fondue dinner (Swiss Chuchi). Sunday 18 Oct: shops closed, restaurants and attractions open.",
   "Rental cars from Swiss locations normally include the motorway vignette; confirm with Sixt. Ask Ruby Mimi about parking for the car on the night of the 18th.",
   "Not included: Schilthorn or Jungfraujoch (too long/expensive for the 1.5h driving rule), parking at hotels, souvenirs."
@@ -777,8 +778,8 @@ details.links{margin-bottom:16px}
  "days": [
   {
    "date": "2026-10-16",
-   "title": "Arrival, Lake Lucerne & Mt Rigi",
-   "summary": "Straight from the airport to Lake Lucerne: lakeside Vitznau, the cog railway up Mt Rigi, then Lucerne's Chapel Bridge at sunset and dinner.",
+   "title": "Arrival, Mt Titlis & Lucerne",
+   "summary": "Straight from the airport into the Alps: Mt Titlis with the Cliff Walk (Europe's highest suspension bridge) and a glacier cave, then Lucerne's Chapel Bridge and dinner.",
    "stops": [
     {
      "start": "09:45",
@@ -806,37 +807,52 @@ details.links{margin-bottom:16px}
      "lng": 8.556
     },
     {
-     "start": "12:45",
-     "durationMin": 50,
-     "title": "Lunch by the lake in Vitznau",
-     "category": "food",
-     "description": "Lakeside lunch at one of the restaurants by the Vitznau pier, a short walk from the Rigi railway station. Pick one on the day.",
-     "costChf": 70,
-     "costNote": "~CHF 70 for two",
+     "start": "13:05",
+     "durationMin": 45,
+     "title": "Mt Titlis: cable cars up to 3,020 m",
+     "category": "activity",
+     "description": "Park at the Engelberg valley station and ride the cable cars up (about 45 min; the Rotair is closed for maintenance in October, so you go up on the Titlis Connect cable car). Last ascent ~16:00, last descent ~17:00. It's cold and snowy at the top: bring a jacket, hat and gloves.",
+     "costChf": 230,
+     "costNote": "Return ticket ~CHF 102–125 pp (sources differ; ~CHF 230 for two), verify on titlis.ch; parking ~CHF 5",
      "drive": {
-      "km": 70,
-      "min": 75
+      "km": 95,
+      "min": 85
      },
-     "mapsQuery": "Vitznau Switzerland",
-     "searchQuery": "Vitznau restaurants lakefront lunch",
-     "lat": 47.0093,
-     "lng": 8.4788
+     "mapsQuery": "Titlis Bahnen Engelberg",
+     "searchQuery": "Titlis Engelberg tickets timetable October",
+     "lat": 46.8183,
+     "lng": 8.4054
     },
     {
      "start": "13:50",
-     "durationMin": 150,
-     "title": "Mt Rigi (Rigi Kulm) by cog railway from Vitznau",
-     "category": "activity",
-     "description": "Europe's oldest mountain railway, ~30 min up from Vitznau to Rigi Kulm. Panorama over Lake Lucerne and the Alps, easy walks near the top, and back down by about 17:00. Check the live timetable.",
-     "costChf": 165,
-     "costNote": "Return ticket ~CHF 78–84 pp (~CHF 156–168), verify on rigi.ch",
-     "mapsQuery": "Rigi Bahn Vitznau",
-     "searchQuery": "Rigi Bahnen Vitznau Rigi Kulm tickets timetable",
-     "lat": 47.009,
-     "lng": 8.478
+     "durationMin": 45,
+     "title": "Lunch at the Titlis summit",
+     "category": "food",
+     "description": "Lunch at one of the restaurants on top of the mountain, with the glacier views.",
+     "costChf": 70,
+     "costNote": "~CHF 70 for two, mountain prices",
+     "mapsQuery": "Titlis summit restaurant",
+     "searchQuery": "Titlis summit restaurant Panorama lunch",
+     "lat": 46.772,
+     "lng": 8.4373,
+     "dirQuery": "Titlis Bahnen Engelberg"
     },
     {
-     "start": "17:10",
+     "start": "14:35",
+     "durationMin": 145,
+     "title": "Titlis Cliff Walk, Glacier Cave & ride back down",
+     "category": "sightseeing",
+     "description": "Cross the Titlis Cliff Walk, Europe's highest suspension bridge at 3,041 m, then the Glacier Cave and the snowy viewpoints. Be at the summit station for the ride down by about 16:15 so you're back in Engelberg by 17:00 (last descent).",
+     "costChf": 0,
+     "costNote": "Cliff Walk and Glacier Cave are included with the ticket",
+     "mapsQuery": "Titlis Cliff Walk",
+     "searchQuery": "Titlis Cliff Walk suspension bridge hours",
+     "lat": 46.7712,
+     "lng": 8.4361,
+     "dirQuery": "Titlis Bahnen Engelberg"
+    },
+    {
+     "start": "17:40",
      "durationMin": 25,
      "title": "Check in at Seehotel Pilatus, Hergiswil",
      "category": "lodging",
@@ -845,7 +861,7 @@ details.links{margin-bottom:16px}
      "costNote": "Hotel already booked",
      "drive": {
       "km": 35,
-      "min": 50
+      "min": 40
      },
      "mapsQuery": "Seehotel Pilatus Hergiswil",
      "searchQuery": "Seehotel Pilatus Hergiswil",
@@ -853,11 +869,11 @@ details.links{margin-bottom:16px}
      "lng": 8.3077
     },
     {
-     "start": "17:50",
-     "durationMin": 70,
-     "title": "Lucerne: Chapel Bridge, old town & lakefront at sunset",
+     "start": "18:20",
+     "durationMin": 55,
+     "title": "Lucerne: Chapel Bridge, old town & lakefront by night",
      "category": "sightseeing",
-     "description": "Lucerne's famous covered Kapellbrücke and Water Tower, the old-town squares and the lakefront promenade as the sun sets (~18:10) and the bridge lights come on.",
+     "description": "Lucerne's famous covered Kapellbrücke and Water Tower, the old-town squares and the lakefront promenade after dark, with the bridge lit up.",
      "costChf": 5,
      "costNote": "Sights free; parking ~CHF 4/h",
      "mapsQuery": "Kapellbrücke Lucerne",
@@ -870,7 +886,7 @@ details.links{margin-bottom:16px}
      }
     },
     {
-     "start": "19:00",
+     "start": "19:15",
      "durationMin": 90,
      "title": "Dinner: Rathaus Brauerei, Lucerne",
      "category": "food",
@@ -883,7 +899,7 @@ details.links{margin-bottom:16px}
      "lng": 8.3087
     },
     {
-     "start": "20:30",
+     "start": "20:45",
      "durationMin": 15,
      "title": "Drive back to Seehotel Pilatus",
      "category": "lodging",
@@ -1082,7 +1098,8 @@ details.links{margin-bottom:16px}
      "mapsQuery": "Pilatus Kulm",
      "searchQuery": "Pilatus Kulm restaurant",
      "lat": 46.9791,
-     "lng": 8.2536
+     "lng": 8.2536,
+     "dirQuery": "Pilatus Bahn Alpnachstad"
     },
     {
      "start": "14:20",
@@ -1333,6 +1350,7 @@ function t12(t){var p=t.split(':'),h=+p[0];return (h%12||12)+':'+p[1]+' '+(h>=12
 function dparts(s){var p=s.split('-');var d=new Date(+p[0],+p[1]-1,+p[2]);return {wd:d.getDay(),d:+p[2],m:MON[+p[1]-1]}}
 function search(q){return 'https://www.google.com/search?q='+encodeURIComponent(q)}
 function place(q){return 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q)}
+function q(s){return s.dirQuery||s.mapsQuery}
 function dir(o,d,w){var u='https://www.google.com/maps/dir/?api=1&origin='+encodeURIComponent(o)+'&destination='+encodeURIComponent(d)+'&travelmode=driving';
  if(w&&w.length)u+='&waypoints='+w.map(encodeURIComponent).join('%7C');return u}
 var store={get:function(k){try{return localStorage.getItem(k)}catch(e){return null}},set:function(k,v){try{v?localStorage.setItem(k,'1'):localStorage.removeItem(k)}catch(e){}}};
@@ -1350,13 +1368,13 @@ plan.days.forEach(function(day,i){
  nav+='<a href="#'+id+'" data-id="'+id+'">Day '+(i+1)+' · '+DAYS[p.wd]+' '+p.d+'</a>';
  var c=0,km=0,mn=0;day.stops.forEach(function(s){c+=s.costChf||0;if(s.drive){km+=s.drive.km;mn+=s.drive.min}});
  var first=day.stops[0],last=day.stops[day.stops.length-1];
- var mid=day.stops.slice(1,-1).map(function(s){return s.mapsQuery}).slice(0,9);
+ var mid=day.stops.slice(1,-1).map(q).slice(0,9);
  html+='<section id="'+id+'"><div class="dayhead"><small>Day '+(i+1)+' · '+FULL[p.wd]+', '+p.m+' '+p.d+'</small><h2>'+esc(day.title)+'</h2><p>'+esc(day.summary)+'</p></div>'+
- '<div class="daymeta"><span>💰 ~CHF '+c+'</span><span>🚗 '+km+' km · '+dur(mn)+'</span><a href="'+dir(first.mapsQuery,last.mapsQuery,mid)+'" target="_blank" rel="noopener">🗺️ Full day route in Google Maps</a></div>';
+ '<div class="daymeta"><span>💰 ~CHF '+c+'</span><span>🚗 '+km+' km · '+dur(mn)+'</span><a href="'+dir(q(first),q(last),mid)+'" target="_blank" rel="noopener">🗺️ Full day route in Google Maps</a></div>';
  day.stops.forEach(function(s,j){
   var cat=CAT[s.category]||CAT.activity,key=plan.slug+':'+day.date+':'+s.start,prev=day.stops[j-1],done=!!store.get(key);
   html+='<div class="stop" data-cat="'+s.category+'">';
-  if(s.drive&&prev)html+='<div class="drive"><span>🚗 '+s.drive.km+' km · '+dur(s.drive.min)+' drive</span><a href="'+dir(prev.mapsQuery,s.mapsQuery)+'" target="_blank" rel="noopener">Directions</a></div>';
+  if(s.drive&&prev)html+='<div class="drive"><span>🚗 '+s.drive.km+' km · '+dur(s.drive.min)+' drive</span><a href="'+dir(q(prev),q(s))+'" target="_blank" rel="noopener">Directions</a></div>';
   html+='<div class="card'+(done?' done':'')+'" data-key="'+esc(key)+'"><div class="top"><div class="title">'+cat[0]+' '+esc(s.title)+'</div><div class="time">'+t12(s.start)+'</div></div>'+
   '<p class="desc">'+esc(s.description)+'</p><div class="chips"><span class="chip cat" style="background:var(--'+cat[2]+');color:var(--'+cat[2]+'-i)">'+cat[1]+'</span>'+
   '<span class="chip">⏱ '+dur(s.durationMin)+' · until '+t12(hhmm(mins(s.start)+s.durationMin))+'</span>'+

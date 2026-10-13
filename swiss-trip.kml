@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2"><Document>
+<name>Swiss Trip 16-19 Oct 2026</name>
+<description>Stops by day. Pin positions are approximate; open each place in Google Maps for the exact spot.</description>
+<Style id="d1"><IconStyle><color>ff5b49d1</color><scale>1.1</scale><Icon><href>http://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff5b49d1</color><width>3</width></LineStyle></Style>
+<Style id="d2"><IconStyle><color>ffab862e</color><scale>1.1</scale><Icon><href>http://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ffab862e</color><width>3</width></LineStyle></Style>
+<Style id="d3"><IconStyle><color>ff008ae0</color><scale>1.1</scale><Icon><href>http://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff008ae0</color><width>3</width></LineStyle></Style>
+<Style id="d4"><IconStyle><color>ff2a9a4c</color><scale>1.1</scale><Icon><href>http://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle><LineStyle><color>ff2a9a4c</color><width>3</width></LineStyle></Style>
+<Folder><name>Day 1 - 2026-10-16 - Arrival, Mt Titlis &amp; Lucerne</name><description>Straight from the airport into the Alps: Mt Titlis with the Cliff Walk (Europe's highest suspension bridge) and a glacier cave, then Lucerne's Chapel Bridge and dinner.</description>
+<Placemark><name>1.1 09:45 Land at Zurich Airport (LY347), passport control, bags</name><description>09:45-11:15 Land at Zurich Airport (LY347), passport control, bags [Flight]
+
+Biometric EU Entry/Exit System may add queue time. Collect bags and head to the Sixt desk.
+
+Open in Google Maps: https://www.google.com/maps/search/?api=1&amp;query=Zurich%20Airport%20Sixt%20car%20rental</description><styleUrl>#d1</styleUrl><Point><coordinates>8.5555,47.4582,0</coordinates></Point></Placemark>
+<Placemark><name>1.2 11:15 Pick up the Sixt rental car</name><description>11:15-11:30 Pick up the Sixt rental car [Drive] - Free
+
+Check the car for damage, vignette sticker and fuel policy before leaving.
+Already booked via Rentalcars.com
+
+Open in Google Maps: https://www.google.com/maps/search/?api=1&amp;query=Sixt%20Zurich%20Airport</description><styleUrl>#d1</styleUrl><Point><coordinates>8.556,47.458,0</coordinates></Point></Placemark>
+<Placemark><name>1.3 13:05 Mt Titlis: cable cars up to 3,020 m</name><description>13:05-13:50 Mt Titlis: cable cars up to 3,020 m [Activity] - ~CHF 230
+
+Park at the Engelberg valley station and ride the cable cars up (about 45 min; the Rotair is closed for maintenance in October, so you go up on the Titlis Connect cable car). Last ascent ~16:00, last descent ~17:00. It's cold and snowy at the top: bring a jacket, hat and gloves.
+Return ticket ~CHF 102–125 pp (sources differ; ~CHF 230 for two), verify on titlis.ch; parking ~CHF 5
+
+Open in Google Maps: https://www.google.com/maps/search/?api=1&amp;query=Titlis%20Bahnen%20Engelberg</description><styleUrl>#d1</styleUrl><Point><coordinates>8.4054,46.8183,0</coordinates></Point></Placemark>
+<Placemark><name>1.4 13:50 Lunch at the Titlis summit</name><description>13:50-14:35 Lunch at the Titlis summit [Eat] - ~CHF 70
+
+Lunch at one of the restaurants on top of the mountain, with the glacier views.
+~CHF 70 for two, mountain prices
+
+Open in Google Maps: https://www.google.com/maps/search/?api=1&amp;query=Titlis%20summit%20restaurant</description><styleUrl>#d1</styleUrl><Point><coordinates>8.4373,46.772,0</coordinates></Point></Placemark>
+<Placemark><name>1.5 14:35 Titlis Cliff Walk, Glacier Cave &amp; ride back down</name><description>14:35-17:00 Titlis Cliff Walk, Glacier Cave &amp; ride back down [View] - Free
+
+Cross the Titlis Cliff Walk, Europe's highest suspension bridge at 3,041 m, then the Glacier Cave and the snowy viewpoints. Be at the summit station for the ride down by about 16:15 so you're back in Engelberg by 17:00 (last descent).
+Cliff Walk and Glacier Cave are included with the ticket
+
+Open in Google Maps: https://www.google.com/maps/search/?api=1&amp;query=Titlis%20Cliff%20Walk</description><styleUrl>#d1</styleUrl><Point><coordinates>8.4361,46.7712,0</coordinates></Point></Placemark>
+<Placemark><name>1.6 17:40 Check in at Seehotel Pilatus, Hergiswil</name><description>17:40-18:05 Check in at Seehotel Pilatus, Hergiswil [Hotel]
+20:45-21:00 Drive back to Seehotel Pilatus [Hotel]
+
+Lakeside hotel on Lake Lucerne. Check in and freshen up before dinner.
+Hotel already booked
+
+Open in Google Maps: https://www.google.com/maps/search/?api=1&amp;query=Seehotel%20Pilatus%20Hergiswil</description><styleUrl>#d1</styleUrl><Point><coordinates>8.3077,46.9937,0</coordinates></Point></Placemark>
+<Placemark><name>1.7 18:20 Lucerne: Chapel Bridge, old town &amp; lakefront by night</name><description>18:20-19:15 Lucerne: Chapel Bridge, old town &amp; lakefront by night [View] - ~CHF 5
+
+Lucerne's famous covered Kapellbrücke and Water Tower, the old-town squares and the lakefront promenade after dark, with the bridge lit up.
+Sights free; parking ~CHF 4/h
+
+Open in Google Maps: https://www.google.com/maps/search/?api=1&amp;query=Kapellbr%C3%BCcke%20Lucerne</description><styleUrl>#d1</styleUrl><Point><coordinates>8.3074,47.0517,0</coordinates></Point></Placemark>
+<Placemark><name>1.8 19:15 Dinner: Rathaus Brauerei, Lucerne</name><description>19:15-20:45 Dinner: Rathaus Brauerei, Lucerne [Eat] - ~CHF 90
+
+Swiss beer-hall classics on the Kornmarkt, mains ~CHF 30–40. Alternative: Alpchalet for fondue and raclette.
+~CHF 90 for two with drinks
+
+Open in Google Maps: https://www.google.com/maps/search/?api=1&amp;query=Rathaus%20Brauerei%20Lucerne</description><styleUrl>#d1</styleUrl><Point><coordinates>8.3087,47.0521,0</coordinates></Point></Placemark>
+<Placemark><name>Day 1 route (straight lines)</name><styleUrl>#d1</styleUrl><LineString><tessellate>1</tessellate><coordinates>8.5555,47.4582,0 8.556,47.458,0 8.4054,46.8183,0 8.4373,46.772,0 8.4361,46.7712,0 8.3077,46.9937,0 8.3074,47.0517,0 8.3087,47.0521,0</coordinates></LineString></Placemark>
+</Folder>
+<Folder><name>Day 2 - 2026-10-17 - Jungfrau region: Aare Gorge, Lauterbrunnen &amp; Stechelberg</name><description>Your own version of the Jungfrau day trips: gorge walk, waterfalls and the valley's viewpoints.</description>
+<Placemark><name>2.1 10:00 Leave Seehotel Pilatus</name><description>10:00-10:05 Leave Seehotel Pilatus [Hotel]
+16:30-18:00 Drive back to Hergiswil via Interlaken &amp; Brünig [Drive]
+
+Drive over the Brünig pass towards Meiringen.
+
+Open in Google Maps: https://www.google.com/maps/search/?api=1&amp;query=Seehotel%20Pilatus%20Hergiswil</description><styleUrl>#d2</styleUrl><Point><coordinates>8.3077,46.9937,0</coordinates></Point></Placemark>
+<Placemark><name>2.2 11:00 Aare Gorge (Aareschlucht), Meiringen</name><description>11:00-12:15 Aare Gorge (Aareschlucht), Meiringen [View] - ~CHF 32
+
+1.4 km walk on catwalks cut into the limestone walls above the Aare river. Easy, mostly flat, about an hour.
+~CHF 10–11 pp entry, ~CHF 8–10 parking
+
+Open in Google Maps: https://www.google.com/maps/search/?api=1&amp;query=Aareschlucht%20Meiringen</description><styleUrl>#d2</styleUrl><Point><coordinates>8.22,46.73,0</coordinates></Point></Placemark>
+<Placemark><name>2.3 12:15 Lunch in Meiringen</name><description>12:15-13:00 Lunch in Meiringen [Eat] - ~CHF 60
+
+Home of the meringue — try one for dessert. Casual café or Gasthof in the centre.
+~CHF 60 for two
+
+Open in Google Maps: https://www.google.com/maps/search/?api=1&amp;query=Meiringen%20restaurant%20centre</description><styleUrl>#d2</styleUrl><Point><coordinates>8.187,46.727,0</coordinates></Point></Placemark>
+<Placemark><name>2.4 13:50 Staubbach Falls, Lauterbrunnen</name><description>13:50-14:15 Staubbach Falls, Lauterbrunnen [View] - ~CHF 10
+
+A 270 m waterfall right beside the village; a short stroll from the parking lot with the classic valley view.
+Free; parking ~CHF 10/day
+
+Open in Google Maps: https://www.google.com/maps/search/?api=1&amp;query=Staubbach%20Falls%20Lauterbrunnen</description><styleUrl>#d2</styleUrl><Point><coordinates>7.9072,46.5933,0</coordinates></Point></Placemark>
+<Placemark><name>2.5 14:30 Trümmelbach Falls</name><description>14:30-15:45 Trümmelbach Falls [View] - ~CHF 34
+
+Ten glacier-fed waterfalls thundering inside the mountain, reached by tunnel lift and walkways. Last entry is late afternoon and it closes for the season in early November.
+~CHF 16–17 pp
+
+Open in Google Maps: https://www.google.com/maps/search/?api=1&amp;query=Tr%C3%BCmmelbach%20Falls</description><styleUrl>#d2</styleUrl><Point><coordinates>7.9078,46.5806,0</coordinates></Point></Placemark>
+<Placemark><name>2.6 15:50 Stechelberg viewpoint &amp; end of the valley</name><description>15:50-16:30 Stechelberg viewpoint &amp; end of the valley [View] - ~CHF 5
+
+Quiet end of the Lauterbrunnen valley below the Schilthorn cable car. Short walk and photos of the cliffs and falls.
+Parking ~CHF 5
+
+Open in Google Maps: https://www.google.com/maps/search/?api=1&amp;query=Stechelberg%20Switzerland</description><styleUrl>#d2</styleUrl><Point><coordinates>7.9097,46.5518,0</coordinates></Point></Placemark>
+<Placemark><name>2.7 18:45 Dinner: Wirtshaus Galliker, Lucerne</name><description>18:45-20:15 Dinner: Wirtshaus Galliker, Lucerne [Eat] - ~CHF 100
+
+Traditional Lucerne tavern since 1856 with wood-panelled rooms: Chügelipastete (veal pie), rösti and apple strudel. Saturday dinner service from 18:00 — booking recommended. Fallback: the Seehotel's own restaurant.
+Mains ~CHF 30–45; ~CHF 100 for two
+
+Open in Google Maps: https://www.google.com/maps/search/?api=1&amp;query=Wirtshaus%20Galliker%20Sch%C3%BCtzenstrasse%201%20Luzern</description><styleUrl>#d2</styleUrl><Point><coordinates>8.304,47.0499,0</coordinates></Point></Placemark>
+<Placemark><name>Day 2 route (straight lines)</name><styleUrl>#d2</styleUrl><LineString><tessellate>1</tessellate><coordinates>8.3077,46.9937,0 8.22,46.73,0 8.187,46.727,0 7.9072,46.5933,0 7.9078,46.5806,0 7.9097,46.5518,0 8.304,47.0499,0</coordinates></LineString></Placemark>
+</Folder>
+<Folder><name>Day 3 - 2026-10-18 - Mt Pilatus, Zug &amp; Zurich</name><description>Cog railway to Pilatus Kulm, the lakeside town of Zug, then settle into Zurich for the evening.</description>
+<Placemark><name>3.1 09:45 Check out of Seehotel Pilatus</name><description>09:45-10:00 Check out of Seehotel Pilatus [Hotel]
+
+Load the luggage into the car.
+
+Open in Google Maps: https://www.google.com/maps/search/?api=1&amp;query=Seehotel%20Pilatus%20Hergiswil</description><styleUrl>#d3</styleUrl><Point><coordinates>8.3077,46.9937,0</coordinates></Point></Placemark>
+<Placemark><name>3.2 10:15 Mt Pilatus (Pilatus Kulm) via the cog railway</name><description>10:15-12:15 Mt Pilatus (Pilatus Kulm) via the cog railway [Activity] - ~CHF 156
+
+World's steepest cog railway from Alpnachstad (~30–40 min up). Viewpoints at the summit and the Dragon Trail.
+Return ticket ~CHF 78 pp, parking free/low (verify)
+
+Open in Google Maps: https://www.google.com/maps/search/?api=1&amp;query=Pilatus%20Bahn%20Alpnachstad</description><styleUrl>#d3</styleUrl><Point><coordinates>8.2717,46.9681,0</coordinates></Point></Placemark>
+<Placemark><name>3.3 12:15 Lunch at Pilatus Kulm, then cog railway back down</name><description>12:15-13:30 Lunch at Pilatus Kulm, then cog railway back down [Eat] - ~CHF 60
+
+Lunch with the view at the summit restaurant, then ride the cog railway back down to the car at Alpnachstad.
+~CHF 60 for two
+
+Open in Google Maps: https://www.google.com/maps/search/?api=1&amp;query=Pilatus%20Kulm</description><styleUrl>#d3</styleUrl><Point><coordinates>8.2536,46.9791,0</coordinates></Point></Placemark>
+<Placemark><name>3.4 14:20 Zug old town &amp; lakeside</name><description>14:20-16:00 Zug old town &amp; lakeside [View] - ~CHF 25
+
+Zytturm clock tower, Fischmarkt and promenade. Try the local Zuger Kirschtorte (cherry cake) at a café.
+Café ~CHF 20, parking ~CHF 5
+
+Open in Google Maps: https://www.google.com/maps/search/?api=1&amp;query=Zug%20Altstadt%20Zytturm</description><styleUrl>#d3</styleUrl><Point><coordinates>8.5156,47.1662,0</coordinates></Point></Placemark>
+<Placemark><name>3.5 16:45 Check in at Ruby Mimi Hotel Zurich</name><description>16:45-17:30 Check in at Ruby Mimi Hotel Zurich [Hotel] - ~CHF 35
+
+Ask about parking for the rental car (may be an extra charge).
+Parking estimate ~CHF 30–40/night, verify
+
+Open in Google Maps: https://www.google.com/maps/search/?api=1&amp;query=Ruby%20Mimi%20Hotel%20Zurich</description><styleUrl>#d3</styleUrl><Point><coordinates>8.5417,47.3769,0</coordinates></Point></Placemark>
+<Placemark><name>3.6 17:45 Lindenhof &amp; Niederdorf evening stroll</name><description>17:45-19:15 Lindenhof &amp; Niederdorf evening stroll [View] - ~CHF 10
+
+Lindenhof viewpoint over the old town and river at sunset (~18:10), then the lanes of the Niederdorf. Take tram or taxi from the hotel.
+Tram ~CHF 5 pp
+
+Open in Google Maps: https://www.google.com/maps/search/?api=1&amp;query=Lindenhof%20Zurich</description><styleUrl>#d3</styleUrl><Point><coordinates>8.5409,47.3733,0</coordinates></Point></Placemark>
+<Placemark><name>3.7 19:30 Dinner: Swiss Chuchi (Hotel Adler), Niederdorf</name><description>19:30-21:00 Dinner: Swiss Chuchi (Hotel Adler), Niederdorf [Eat] - ~CHF 100
+
+Cosy Swiss restaurant with nine kinds of cheese fondue plus other specialities, open Sunday evening (listed 12:00–23:15). Reservation recommended. Alternative: Zeughauskeller.
+Fondue ~CHF 35–40 pp; ~CHF 100 for two with drinks
+
+Open in Google Maps: https://www.google.com/maps/search/?api=1&amp;query=Swiss%20Chuchi%20Hotel%20Adler%20Rosengasse%2010%20Zurich</description><styleUrl>#d3</styleUrl><Point><coordinates>8.544,47.3727,0</coordinates></Point></Placemark>
+<Placemark><name>Day 3 route (straight lines)</name><styleUrl>#d3</styleUrl><LineString><tessellate>1</tessellate><coordinates>8.3077,46.9937,0 8.2717,46.9681,0 8.2536,46.9791,0 8.5156,47.1662,0 8.5417,47.3769,0 8.5409,47.3733,0 8.544,47.3727,0</coordinates></LineString></Placemark>
+</Folder>
+<Folder><name>Day 4 - 2026-10-19 - Zurich: Uetliberg, old town &amp; flight home</name><description>Your Zurich day: Zurich's own mountain with a city panorama, the old town and lake, then the airport for the 21:15 flight.</description>
+<Placemark><name>4.1 09:45 Check out of Ruby Mimi, load the car</name><description>09:45-10:00 Check out of Ruby Mimi, load the car [Hotel]
+
+Luggage stays in the car for the day (parked in a garage).
+
+Open in Google Maps: https://www.google.com/maps/search/?api=1&amp;query=Ruby%20Mimi%20Hotel%20Zurich</description><styleUrl>#d4</styleUrl><Point><coordinates>8.5417,47.3769,0</coordinates></Point></Placemark>
+<Placemark><name>4.2 10:15 Park the car in central Zurich</name><description>10:15-10:30 Park the car in central Zurich [Drive] - ~CHF 45
+
+Leave the car in a central garage for the day (e.g. Parkhaus Urania next to the main station). Walk to the station, 10 min.
+Day parking ~CHF 40–50, verify
+
+Open in Google Maps: https://www.google.com/maps/search/?api=1&amp;query=Parkhaus%20Urania%20Zurich</description><styleUrl>#d4</styleUrl><Point><coordinates>8.5387,47.3722,0</coordinates></Point></Placemark>
+<Placemark><name>4.3 10:45 Uetliberg: Zurich's mountain, tower &amp; panorama</name><description>10:45-13:15 Uetliberg: Zurich's mountain, tower &amp; panorama [View] - ~CHF 47
+
+S10 train from Zurich main station (~25 min) to Uetliberg, 10–15 min walk to the summit and the observation tower (178 steps) for views over the city, the lake and the Alps. Train back to the city.
+S10 return ~CHF 18 pp (~CHF 36), tower CHF 5 pp (~CHF 10), verify; check for line closures
+
+Open in Google Maps: https://www.google.com/maps/search/?api=1&amp;query=Uetliberg%20Aussichtsturm%20Zurich</description><styleUrl>#d4</styleUrl><Point><coordinates>8.4906,47.3495,0</coordinates></Point></Placemark>
+<Placemark><name>4.4 13:30 Lunch: Haus Hiltl (vegetarian buffet)</name><description>13:30-14:30 Lunch: Haus Hiltl (vegetarian buffet) [Eat] - ~CHF 55
+
+The world's oldest vegetarian restaurant (since 1898): a pay-by-weight buffet with hot and cold dishes, a 10-min walk from the station. Open Monday 7:00–22:00.
+~CHF 55 for two
+
+Open in Google Maps: https://www.google.com/maps/search/?api=1&amp;query=Haus%20Hiltl%20Sihlstrasse%2028%20Zurich</description><styleUrl>#d4</styleUrl><Point><coordinates>8.537,47.3735,0</coordinates></Point></Placemark>
+<Placemark><name>4.5 14:30 Old town: Grossmünster, Fraumünster &amp; the Limmat</name><description>14:30-15:45 Old town: Grossmünster, Fraumünster &amp; the Limmat [View] - ~CHF 20
+
+Climb the Grossmünster tower, see Chagall's stained-glass windows in the Fraumünster, and stroll across the Rathausbrücke and through the lanes of the old town.
+Towers/church entry ~CHF 5 pp each, verify
+
+Open in Google Maps: https://www.google.com/maps/search/?api=1&amp;query=Grossm%C3%BCnster%20Zurich</description><styleUrl>#d4</styleUrl><Point><coordinates>8.5441,47.3702,0</coordinates></Point></Placemark>
+<Placemark><name>4.6 15:45 Bahnhofstrasse &amp; lake promenade at Bürkliplatz</name><description>15:45-16:30 Bahnhofstrasse &amp; lake promenade at Bürkliplatz [View] - ~CHF 15
+
+Walk down Bahnhofstrasse to Lake Zurich, along the promenade at Bürkliplatz with views toward the Alps. Coffee or a pastry stop.
+Coffee/pastry ~CHF 15
+
+Open in Google Maps: https://www.google.com/maps/search/?api=1&amp;query=B%C3%BCrkliplatz%20Zurich</description><styleUrl>#d4</styleUrl><Point><coordinates>8.541,47.3669,0</coordinates></Point></Placemark>
+<Placemark><name>4.7 16:30 Early dinner: Zeughauskeller, Zurich</name><description>16:30-17:30 Early dinner: Zeughauskeller, Zurich [Eat] - ~CHF 80
+
+Historic arsenal hall on Bahnhofstrasse with Swiss classics and big portions, ~CHF 30 mains. Open daily 11:30–23:00. An early dinner, since you need to be at the airport by 18:15.
+~CHF 80 for two
+
+Open in Google Maps: https://www.google.com/maps/search/?api=1&amp;query=Zeughauskeller%20Zurich</description><styleUrl>#d4</styleUrl><Point><coordinates>8.5388,47.3694,0</coordinates></Point></Placemark>
+<Placemark><name>4.8 17:30 Collect the car, drive to the airport &amp; return the Sixt car</name><description>17:30-18:15 Collect the car, drive to the airport &amp; return the Sixt car [Drive] - ~CHF 20
+
+Pick the car up from the garage, refuel, and drive ~25 min to the airport. Allow buffer for Monday rush hour.
+Fuel top-up estimate
+
+Open in Google Maps: https://www.google.com/maps/search/?api=1&amp;query=Sixt%20car%20return%20Zurich%20Airport</description><styleUrl>#d4</styleUrl><Point><coordinates>8.556,47.458,0</coordinates></Point></Placemark>
+<Placemark><name>4.9 18:15 Check in &amp; fly home (LY344, 21:15)</name><description>18:15-21:15 Check in &amp; fly home (LY344, 21:15) [Flight]
+
+Arrives Tel Aviv 02:10 on 20 Oct.
+
+Open in Google Maps: https://www.google.com/maps/search/?api=1&amp;query=Zurich%20Airport%20Terminal%201%20departures</description><styleUrl>#d4</styleUrl><Point><coordinates>8.5555,47.4582,0</coordinates></Point></Placemark>
+<Placemark><name>Day 4 route (straight lines)</name><styleUrl>#d4</styleUrl><LineString><tessellate>1</tessellate><coordinates>8.5417,47.3769,0 8.5387,47.3722,0 8.4906,47.3495,0 8.537,47.3735,0 8.5441,47.3702,0 8.541,47.3669,0 8.5388,47.3694,0 8.556,47.458,0 8.5555,47.4582,0</coordinates></LineString></Placemark>
+</Folder>
+</Document></kml>

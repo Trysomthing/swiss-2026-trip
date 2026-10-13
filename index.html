@@ -729,6 +729,11 @@ details.links{margin-bottom:16px}
 #catfilters button.on{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .stop.hide,section.hide{display:none}
 .nomatch{color:var(--mute);font-size:14px;padding:8px 0}
+#modebar{display:flex;gap:8px;margin-top:12px}
+#modebar button{flex:1;font:inherit;font-size:14px;font-weight:700;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 8px;cursor:pointer}
+#modebar button.on{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.modenote{font-size:13px;color:var(--mute);margin:8px 0 0}
+.rainbadge{color:#2e86ab;font-weight:700}
 #mapwrap{margin-bottom:32px;scroll-margin-top:112px}
 #mapwrap h2{font:italic 600 24px/1.2 Georgia,serif;margin:0 0 10px}
 #filters{display:flex;gap:8px;overflow-x:auto;margin-bottom:10px}
@@ -739,7 +744,7 @@ details.links{margin-bottom:16px}
 .pin{width:26px;height:26px;border-radius:50%;color:#fff;font:700 12px/22px system-ui,sans-serif;text-align:center;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.45)}
 .leaflet-popup-content{font:14px/1.4 system-ui,sans-serif;margin:10px 12px;color:#1d2428}
 .leaflet-popup-content a{font-weight:600}
-@media print{#mapwrap{display:none}#catfilters{display:none}nav,.btns,label.chk{display:none}body{background:#fff}.card{break-inside:avoid}}
+@media print{#mapwrap{display:none}#modebar{display:none}#catfilters{display:none}nav,.btns,label.chk{display:none}body{background:#fff}.card{break-inside:avoid}}
 </style>
 </head>
 <body>
@@ -747,6 +752,8 @@ details.links{margin-bottom:16px}
   <h1 id="title"></h1>
   <p class="sub" id="subtitle"></p>
   <div class="stats" id="stats"></div>
+  <div id="modebar"></div>
+  <p class="modenote" id="modenote"></p>
 </header>
 <nav><div id="nav"></div><div id="catfilters"></div></nav>
 <main>
@@ -1331,11 +1338,236 @@ details.links{margin-bottom:16px}
    "sub": "Google Sheets",
    "url": "https://docs.google.com/spreadsheets/d/1M1zNZD9aKFpXPUum2J7g6_dMi4OYXEWtU3vrlqov8Hk/edit?gid=1169576147#gid=1169576147"
   }
- ]
+ ],
+ "rain": {
+  "2026-10-17": {
+   "date": "2026-10-17",
+   "rain": true,
+   "title": "Rain plan: glass, trains & art around Lucerne",
+   "summary": "Everything indoors and close to the hotel, with no long drives in the rain: the Glasi glassworks, the Swiss Museum of Transport, a Picasso collection and a traditional dinner.",
+   "stops": [
+    {
+     "start": "10:00",
+     "durationMin": 90,
+     "title": "Glasi Hergiswil: glassblowers, museum & glass labyrinth",
+     "category": "sightseeing",
+     "description": "The glassworks is right in Hergiswil, a few minutes from the hotel. Watch the glassblowers at work (they take a break 12:30–13:00 on Saturdays), see the glass museum and the glass labyrinth, and blow your own glass ball.",
+     "costChf": 44,
+     "costNote": "Museum CHF 7 pp, labyrinth CHF 5 pp, blow your own ball ~CHF 20; open Sat 9–16, verify on glasi.ch",
+     "drive": {
+      "km": 2,
+      "min": 5
+     },
+     "mapsQuery": "Glasi Hergiswil",
+     "searchQuery": "Glasi Hergiswil Öffnungszeiten Glasbläser",
+     "lat": 46.9908,
+     "lng": 8.3028
+    },
+    {
+     "start": "11:50",
+     "durationMin": 105,
+     "title": "Swiss Museum of Transport (Verkehrshaus), Lucerne",
+     "category": "activity",
+     "description": "Switzerland's most visited museum: trains, planes, cars, ships and space, mostly under cover. Hands-on halls make it good even for a long rainy morning.",
+     "costChf": 124,
+     "costNote": "Day pass with planetarium & Chocolate Adventure ~CHF 62 pp (~CHF 124); museum-only ticket ~CHF 37 pp (~CHF 74); open daily, verify on verkehrshaus.ch",
+     "drive": {
+      "km": 14,
+      "min": 20
+     },
+     "mapsQuery": "Verkehrshaus der Schweiz Luzern",
+     "searchQuery": "Verkehrshaus Luzern Tickets Öffnungszeiten",
+     "lat": 47.0521,
+     "lng": 8.3359
+    },
+    {
+     "start": "13:35",
+     "durationMin": 45,
+     "title": "Lunch at the Verkehrshaus restaurant",
+     "category": "food",
+     "description": "Lunch inside the museum complex so you stay dry.",
+     "costChf": 50,
+     "costNote": "~CHF 50 for two",
+     "mapsQuery": "Verkehrshaus der Schweiz Luzern",
+     "searchQuery": "Verkehrshaus Luzern Restaurant",
+     "lat": 47.0521,
+     "lng": 8.3359
+    },
+    {
+     "start": "14:20",
+     "durationMin": 70,
+     "title": "Planetarium & Swiss Chocolate Adventure (Verkehrshaus)",
+     "category": "activity",
+     "description": "The planetarium show and the chocolate-making ride, both included with the day pass.",
+     "costChf": 0,
+     "costNote": "Included in the day pass",
+     "mapsQuery": "Verkehrshaus der Schweiz Luzern",
+     "searchQuery": "Verkehrshaus Planetarium Swiss Chocolate Adventure",
+     "lat": 47.0521,
+     "lng": 8.3359
+    },
+    {
+     "start": "15:45",
+     "durationMin": 75,
+     "title": "Museum Sammlung Rosengart (Picasso & Klee), Lucerne",
+     "category": "sightseeing",
+     "description": "A compact, indoor art museum with one of the largest private Picasso collections and works by Klee, near the old town. Open daily 10–18 in October.",
+     "costChf": 40,
+     "costNote": "~CHF 18–20 pp, verify on rosengart.ch",
+     "drive": {
+      "km": 3,
+      "min": 10
+     },
+     "mapsQuery": "Museum Sammlung Rosengart Luzern",
+     "searchQuery": "Museum Sammlung Rosengart Luzern Tickets",
+     "lat": 47.0513,
+     "lng": 8.3102
+    },
+    {
+     "start": "17:00",
+     "durationMin": 60,
+     "title": "Coffee & cake in the Lucerne old town",
+     "category": "food",
+     "description": "Warm up in a café in the old town and stroll the arcades. The covered Chapel Bridge is nearby, and its roof keeps you dry.",
+     "costChf": 20,
+     "costNote": "Coffee and cake ~CHF 20",
+     "drive": {
+      "km": 2,
+      "min": 8
+     },
+     "mapsQuery": "Kapellbrücke Lucerne",
+     "searchQuery": "Café Luzern Altstadt Kuchen",
+     "lat": 47.0517,
+     "lng": 8.3074
+    },
+    {
+     "start": "18:45",
+     "durationMin": 90,
+     "title": "Dinner: Wirtshaus Galliker, Lucerne",
+     "category": "food",
+     "description": "Traditional Lucerne tavern since 1856 with wood-panelled rooms: Chügelipastete (veal pie), rösti and apple strudel. Saturday dinner service from 18:00 — booking recommended. Fallback: the Seehotel's own restaurant.",
+     "costChf": 100,
+     "costNote": "Mains ~CHF 30–45; ~CHF 100 for two",
+     "drive": {
+      "km": 2,
+      "min": 10
+     },
+     "mapsQuery": "Wirtshaus Galliker Schützenstrasse 1 Luzern",
+     "searchQuery": "Wirtshaus Galliker Luzern Reservation Speisekarte",
+     "lat": 47.0499,
+     "lng": 8.304
+    }
+   ]
+  },
+  "2026-10-18": {
+   "date": "2026-10-18",
+   "rain": true,
+   "title": "Rain plan: Einsiedeln Abbey & Lindt chocolate, then Zurich",
+   "summary": "No mountains in the rain: the baroque abbey of Einsiedeln, then Lindt Home of Chocolate on the way into Zurich. Same hotel and dinner as the dry plan.",
+   "stops": [
+    {
+     "start": "09:45",
+     "durationMin": 15,
+     "title": "Check out of Seehotel Pilatus",
+     "category": "lodging",
+     "description": "Load the luggage into the car.",
+     "costChf": null,
+     "mapsQuery": "Seehotel Pilatus Hergiswil",
+     "searchQuery": "Seehotel Pilatus Hergiswil",
+     "lat": 46.9937,
+     "lng": 8.3077
+    },
+    {
+     "start": "11:10",
+     "durationMin": 60,
+     "title": "Einsiedeln Abbey (Kloster Einsiedeln)",
+     "category": "sightseeing",
+     "description": "One of Switzerland's great baroque abbeys and a major pilgrimage site with the Black Madonna. The church is free to enter. It's a working church, so keep quiet during services. Library tours may not run on Sundays: check kloster-einsiedeln.ch.",
+     "costChf": 0,
+     "costNote": "Church free; tours extra",
+     "drive": {
+      "km": 60,
+      "min": 70
+     },
+     "mapsQuery": "Kloster Einsiedeln",
+     "searchQuery": "Kloster Einsiedeln Öffnungszeiten Klosterkirche Sonntag",
+     "lat": 47.1276,
+     "lng": 8.7567
+    },
+    {
+     "start": "12:15",
+     "durationMin": 60,
+     "title": "Lunch in Einsiedeln",
+     "category": "food",
+     "description": "Lunch at one of the restaurants around the Klosterplatz, right by the abbey. Pick one on the day, as some close on Sunday afternoons.",
+     "costChf": 55,
+     "costNote": "~CHF 55 for two",
+     "mapsQuery": "Einsiedeln Klosterplatz restaurants",
+     "searchQuery": "Einsiedeln Klosterplatz Restaurant Sonntag geöffnet",
+     "lat": 47.1276,
+     "lng": 8.7567
+    },
+    {
+     "start": "14:15",
+     "durationMin": 120,
+     "title": "Lindt Home of Chocolate, Kilchberg",
+     "category": "activity",
+     "description": "Chocolate museum on Lake Zurich with a 9 m chocolate fountain, an audio-guide tour from bean to bar, and tastings. Open Sunday 10:00–19:00. Book a timed ticket online in advance.",
+     "costChf": 54,
+     "costNote": "Entry CHF 17 pp (~CHF 34), café/treats ~CHF 20, verify on lindt-home-of-chocolate.com",
+     "drive": {
+      "km": 45,
+      "min": 55
+     },
+     "mapsQuery": "Lindt Home of Chocolate Kilchberg",
+     "searchQuery": "Lindt Home of Chocolate Kilchberg tickets opening hours",
+     "lat": 47.3235,
+     "lng": 8.5543
+    },
+    {
+     "start": "16:45",
+     "durationMin": 45,
+     "title": "Check in at Ruby Mimi Hotel Zurich",
+     "category": "lodging",
+     "description": "Ask about parking for the rental car (may be an extra charge).",
+     "costChf": 35,
+     "costNote": "Parking estimate ~CHF 30–40/night, verify",
+     "drive": {
+      "km": 15,
+      "min": 25
+     },
+     "mapsQuery": "Ruby Mimi Hotel Zurich",
+     "searchQuery": "Ruby Mimi Hotel Zurich parking",
+     "lat": 47.3769,
+     "lng": 8.5417
+    },
+    {
+     "start": "19:30",
+     "durationMin": 90,
+     "title": "Dinner: Swiss Chuchi (Hotel Adler), Niederdorf",
+     "category": "food",
+     "description": "Cosy Swiss restaurant with nine kinds of cheese fondue plus other specialities, open Sunday evening (listed 12:00–23:15). Reservation recommended. Alternative: Zeughauskeller.",
+     "costChf": 100,
+     "costNote": "Fondue ~CHF 35–40 pp; ~CHF 100 for two with drinks",
+     "mapsQuery": "Swiss Chuchi Hotel Adler Rosengasse 10 Zurich",
+     "searchQuery": "Swiss Chuchi Hotel Adler Zürich reservation fondue",
+     "lat": 47.3727,
+     "lng": 8.544
+    }
+   ]
+  }
+ },
+ "rainNote": "Rain plan: Saturday and Sunday swapped for indoor alternatives. Friday (Titlis) and Monday (Zurich) are unchanged. Hotels are the same."
 }</script>
 <script>
 (function(){
 var plan=JSON.parse(document.getElementById('plan').textContent);
+var RAIN=false;
+try{
+ var qm=/[?&]plan=(\w+)/.exec(location.search);
+ if(qm)RAIN=qm[1]==='rain';else RAIN=localStorage.getItem('swiss-rain')==='1';
+}catch(e){}
+if(RAIN&&plan.rain)plan.days=plan.days.map(function(d){return plan.rain[d.date]||d});
 var CAT={sightseeing:['🏞️','View','sight'],food:['🍽️','Eat','food'],transport:['🚗','Drive','transport'],
 lodging:['🛏️','Hotel','lodging'],activity:['🧭','Activity','activity'],flight:['✈️','Flight','flight']};
 var CAT_ORDER=['food','sightseeing','activity','transport','lodging','flight'];
@@ -1358,6 +1590,11 @@ var store={get:function(k){try{return localStorage.getItem(k)}catch(e){return nu
 var G={cost:0,km:0,min:0};
 plan.days.forEach(function(d){d.stops.forEach(function(s){G.cost+=s.costChf||0;if(s.drive){G.km+=s.drive.km;G.min+=s.drive.min}})});
 $('title').textContent=plan.title;$('subtitle').textContent=plan.subtitle;
+$('modebar').innerHTML='<button data-m="a"'+(RAIN?'':' class="on"')+'>☀️ Plan A (dry)</button><button data-m="rain"'+(RAIN?' class="on"':'')+'>☔ Rain plan (Sat &amp; Sun)</button>';
+$('modenote').textContent=RAIN?plan.rainNote:'Plan A is the main plan. If rain is forecast for Saturday and Sunday, switch to the rain plan.';
+$('modebar').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var r=b.getAttribute('data-m')==='rain';
+ try{localStorage.setItem('swiss-rain',r?'1':'0')}catch(x){}
+ location.href=location.href.split('?')[0].split('#')[0]+'?plan='+(r?'rain':'a');});
 $('stats').innerHTML='<div class="stat"><b>CHF '+G.cost+'</b><span>Est. total (2)</span></div><div class="stat"><b>'+G.km+' km</b><span>Driving</span></div><div class="stat"><b>'+dur(G.min)+'</b><span>Drive time</span></div>';
 $('noteList').innerHTML=plan.notes.map(function(n){return '<li>'+esc(n)+'</li>'}).join('');
 
@@ -1365,11 +1602,11 @@ $('links').innerHTML='<summary>🔗 Links ('+plan.links.length+')</summary><div 
 var nav='',html='';
 plan.days.forEach(function(day,i){
  var p=dparts(day.date),id='day'+(i+1);
- nav+='<a href="#'+id+'" data-id="'+id+'">Day '+(i+1)+' · '+DAYS[p.wd]+' '+p.d+'</a>';
+ nav+='<a href="#'+id+'" data-id="'+id+'">'+(day.rain?'☔ ':'')+'Day '+(i+1)+' · '+DAYS[p.wd]+' '+p.d+'</a>';
  var c=0,km=0,mn=0;day.stops.forEach(function(s){c+=s.costChf||0;if(s.drive){km+=s.drive.km;mn+=s.drive.min}});
  var first=day.stops[0],last=day.stops[day.stops.length-1];
  var mid=day.stops.slice(1,-1).map(q).slice(0,9);
- html+='<section id="'+id+'"><div class="dayhead"><small>Day '+(i+1)+' · '+FULL[p.wd]+', '+p.m+' '+p.d+'</small><h2>'+esc(day.title)+'</h2><p>'+esc(day.summary)+'</p></div>'+
+ html+='<section id="'+id+'"><div class="dayhead"><small>Day '+(i+1)+' · '+FULL[p.wd]+', '+p.m+' '+p.d+(day.rain?' · <span class="rainbadge">☔ Rain plan</span>':'')+'</small><h2>'+esc(day.title)+'</h2><p>'+esc(day.summary)+'</p></div>'+
  '<div class="daymeta"><span>💰 ~CHF '+c+'</span><span>🚗 '+km+' km · '+dur(mn)+'</span><a href="'+dir(q(first),q(last),mid)+'" target="_blank" rel="noopener">🗺️ Full day route in Google Maps</a></div>';
  day.stops.forEach(function(s,j){
   var cat=CAT[s.category]||CAT.activity,key=plan.slug+':'+day.date+':'+s.start,prev=day.stops[j-1],done=!!store.get(key);

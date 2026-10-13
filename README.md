@@ -8,3 +8,8 @@ browser (phone included) or send the file to someone. The itinerary data is the 
 inside the file (`<script id="plan">`); edit it there.
 
 Costs are estimates — verify prices and opening hours before travelling.
+
+## Rain plan
+
+`index.html` has a switch at the top: **Plan A (dry)** and **Rain plan (Sat & Sun)**. You can also open
+`index.html?plan=rain` directly. `swiss-trip.kml` and `swiss-trip-rain.kml` import into Google My Maps.
